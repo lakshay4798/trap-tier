@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://gdmuoho3wog3"]
 
-[ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://player.tscn" id="1_3hls8"]
-[ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="1_1ltoh"]
+[ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="2_rws7c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hn12h"]
-texture = ExtResource("2_hbghi")
+texture = ExtResource("2_rws7c")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -217,7 +217,7 @@ offset_right = 1281.0
 offset_bottom = 721.0
 color = Color(0.5006195, 0.5006196, 0.5006196, 1)
 
-[node name="player" parent="." unique_id=2030552630 instance=ExtResource("1_3hls8")]
+[node name="player" parent="." unique_id=2030552630 instance=ExtResource("1_1ltoh")]
 position = Vector2(280, 297)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=871482912]

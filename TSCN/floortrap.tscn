@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c15iqdb7nhwum"]
 
-[ext_resource type="Script" uid="uid://dv36rqqmapat5" path="res://TSCN/floortrap.gd" id="1_l65an"]
+[ext_resource type="Script" uid="uid://dv36rqqmapat5" path="res://SCRIPTS/floortrap.gd" id="1_l65an"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovyfj"]
 

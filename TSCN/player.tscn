@@ -124,7 +124,6 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_2hs0m")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.86097884
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715380799]
 position = Vector2(-1, -1)
@@ -137,3 +136,16 @@ visible = false
 offset_right = 1299.0
 offset_bottom = 744.0
 color = Color(0, 0, 0, 0.27450982)
+
+[node name="deathparticles" type="CPUParticles2D" parent="." unique_id=442686474]
+emitting = false
+amount = 20
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 2.18
+spread = 180.0
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+scale_amount_min = 7.0
+scale_amount_max = 15.0
+color = Color(0, 0, 0, 1)

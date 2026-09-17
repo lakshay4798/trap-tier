@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c15iqdb7nhwum"]
+
+[ext_resource type="Script" uid="uid://dv36rqqmapat5" path="res://TSCN/floortrap.gd" id="1_l65an"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovyfj"]
+
+[node name="floortrap" type="Area2D" unique_id=602729217]
+script = ExtResource("1_l65an")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1025832888]
+scale = Vector2(5, 10)
+shape = SubResource("RectangleShape2D_ovyfj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

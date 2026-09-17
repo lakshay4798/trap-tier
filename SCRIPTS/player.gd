@@ -1,15 +1,16 @@
 extends CharacterBody2D
 
 @onready var animated : AnimatedSprite2D = $AnimatedSprite2D
+@onready var color : ColorRect = $CanvasLayer/ColorRect
 var is_dead: bool = false
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 
-#func _input(event: InputEvent) -> void:
-	#if Input.is_key_pressed(KEY_D):
-		#animated.play("run")
+func _input(event: InputEvent) -> void:
+	if Input.is_key_pressed(KEY_SPACE):
+		color.visible = true
 
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:

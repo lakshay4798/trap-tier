@@ -129,3 +129,11 @@ frame_progress = 0.86097884
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715380799]
 position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_n7ghd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=663394107]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1174716112]
+visible = false
+offset_right = 1299.0
+offset_bottom = 744.0
+color = Color(0, 0, 0, 0.27450982)

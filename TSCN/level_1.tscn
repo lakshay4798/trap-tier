@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="2_rws7c"]
 [ext_resource type="PackedScene" uid="uid://c15iqdb7nhwum" path="res://TSCN/floortrap.tscn" id="3_rws7c"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_ukf5u"]
-[ext_resource type="Script" uid="uid://ddg1y0xxdx47b" path="res://TSCN/area_2d.gd" id="5_qudvi"]
+[ext_resource type="Script" uid="uid://ddg1y0xxdx47b" path="res://SCRIPTS/area_2d.gd" id="5_qudvi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hn12h"]
 texture = ExtResource("2_rws7c")

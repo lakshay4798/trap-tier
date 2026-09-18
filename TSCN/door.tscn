@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ckxwu2efa3hvi"]
 
+[ext_resource type="Script" uid="uid://csbv31debm8pv" path="res://SCRIPTS/door.gd" id="1_kg27j"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukf5u"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 4
@@ -14,6 +16,7 @@ corner_detail = 20
 size = Vector2(56, 92)
 
 [node name="door" type="Area2D" unique_id=243384013]
+script = ExtResource("1_kg27j")
 
 [node name="Panel" type="Panel" parent="." unique_id=1012340934]
 offset_left = 958.0
@@ -25,3 +28,5 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ukf5u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1661611195]
 position = Vector2(990, 412)
 shape = SubResource("RectangleShape2D_ukf5u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

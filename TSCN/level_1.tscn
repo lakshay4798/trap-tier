@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="1_1ltoh"]
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_rv1m0"]
+[ext_resource type="PackedScene" uid="uid://deqeylgklhe4p" path="res://TSCN/level_2.tscn" id="2_2o4vc"]
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="2_rws7c"]
 [ext_resource type="PackedScene" uid="uid://c15iqdb7nhwum" path="res://TSCN/floortrap.tscn" id="3_rws7c"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_ukf5u"]
@@ -423,6 +424,7 @@ color = Color(0.5006195, 0.5006196, 0.5006196, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_rv1m0")]
 position = Vector2(2, 0)
+next_level_scene = ExtResource("2_2o4vc")
 
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("1_1ltoh")]
 position = Vector2(314, 279)

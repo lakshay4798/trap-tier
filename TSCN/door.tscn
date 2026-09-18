@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ckxwu2efa3hvi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukf5u"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 20
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukf5u"]
+size = Vector2(56, 92)
+
+[node name="door" type="Area2D" unique_id=243384013]
+
+[node name="Panel" type="Panel" parent="." unique_id=1012340934]
+offset_left = 958.0
+offset_top = 362.0
+offset_right = 1022.0
+offset_bottom = 454.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ukf5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1661611195]
+position = Vector2(990, 412)
+shape = SubResource("RectangleShape2D_ukf5u")

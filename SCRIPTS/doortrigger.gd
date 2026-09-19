@@ -10,5 +10,5 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		door.global_position = Vector2(-500,-30)
-		await get_tree().create_timer(1.3).timeout
+		await get_tree().create_timer(1).timeout
 		door.global_position = Vector2(0,-30)

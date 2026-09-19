@@ -2,10 +2,14 @@ extends CharacterBody2D
 
 @onready var animated : AnimatedSprite2D = $AnimatedSprite2D
 @onready var color : ColorRect = $CanvasLayer/ColorRect
+#@onready var level1
+
 var is_dead: bool = false
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@export var SPEED : float = 300.0
+@export var JUMP_VELOCITY : float = -400.0
+#const SPEED = 300.0
+#const JUMP_VELOCITY = -400.0
 
 
 func _input(event: InputEvent) -> void:

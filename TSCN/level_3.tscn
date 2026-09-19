@@ -253,6 +253,7 @@ tile_set = SubResource("TileSet_oqvi8")
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("2_ksw6i")]
 position = Vector2(49, 370)
 scale = Vector2(0.7, 0.7)
+JUMP_VELOCITY = -200.0
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_u5he2")]
 position = Vector2(519, 619)

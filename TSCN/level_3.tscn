@@ -312,6 +312,8 @@ tile_set = SubResource("TileSet_oqvi8")
 position = Vector2(49, 370)
 scale = Vector2(0.7, 0.7)
 JUMP_VELOCITY = -200.0
+move_left_action = "ui_left"
+move_right_action = "ui_right"
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_u5he2")]
 position = Vector2(519, 619)

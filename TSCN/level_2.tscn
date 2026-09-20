@@ -238,6 +238,8 @@ tile_set = SubResource("TileSet_n7ypv")
 position = Vector2(37, 338)
 scale = Vector2(0.7, 0.7)
 SPEED = 600.0
+move_left_action = "ui_left"
+move_right_action = "ui_right"
 
 [node name="doortrigger" parent="." unique_id=839245385 instance=ExtResource("4_40b80")]
 position = Vector2(905, 445)

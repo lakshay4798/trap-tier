@@ -3,6 +3,7 @@
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="1_88re3"]
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_gcmrh"]
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="2_kukud"]
+[ext_resource type="PackedScene" uid="uid://261e6a3et4vb" path="res://TSCN/level_5.tscn" id="3_0vgru"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_gcmrh"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_kukud"]
 
@@ -226,8 +227,95 @@ offset_right = 1282.0
 offset_bottom = 721.0
 color = Color(0.68804306, 0.68804306, 0.688043, 1)
 
+[node name="spikes5" type="Node2D" parent="." unique_id=1844158044]
+position = Vector2(625, 10)
+scale = Vector2(0.7, 0.7)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spikes5" unique_id=640206756]
+position = Vector2(485.49997, 625)
+scale = Vector2(36.999992, -72.00001)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="spikes5" unique_id=86193947]
+position = Vector2(507.49997, 625)
+scale = Vector2(36.999992, -72.00001)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="spikes5" unique_id=325032985]
+position = Vector2(528.49994, 625)
+scale = Vector2(36.999992, -72.00001)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="spikes5" unique_id=148976310]
+position = Vector2(551.49994, 625)
+scale = Vector2(36.999992, -72.00001)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="death" parent="spikes5" unique_id=1474996204 instance=ExtResource("4_kukud")]
+position = Vector2(522, 610)
+scale = Vector2(0.1, 2)
+
+[node name="spikes3" type="Node2D" parent="." unique_id=2113087207]
+position = Vector2(337, 1012)
+rotation = -1.5707964
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spikes3" unique_id=1710295673]
+position = Vector2(484.8627, 606.2645)
+scale = Vector2(18.391981, -34.529003)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="spikes3" unique_id=1749009646]
+position = Vector2(505.23492, 606.3235)
+scale = Vector2(23.803165, -34.64697)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="spikes3" unique_id=1130278629]
+position = Vector2(526.6798, 606.5609)
+scale = Vector2(24.812798, -35.121784)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="spikes3" unique_id=13790596]
+position = Vector2(549.1429, 606.61475)
+scale = Vector2(25.321758, -35.22945)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="death3" parent="spikes3" unique_id=938933062 instance=ExtResource("4_kukud")]
+position = Vector2(524, 605.99994)
+rotation = 1.5707964
+scale = Vector2(0.04, 4)
+
+[node name="spikes4" type="Node2D" parent="." unique_id=1752665748]
+position = Vector2(1641, -24)
+rotation = 1.5707964
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spikes4" unique_id=889112920]
+position = Vector2(484.8627, 606.2645)
+scale = Vector2(18.391981, -34.529003)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="spikes4" unique_id=749600327]
+position = Vector2(505.23492, 606.3235)
+scale = Vector2(23.803165, -34.64697)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="spikes4" unique_id=1059418781]
+position = Vector2(526.6798, 606.5609)
+scale = Vector2(24.812798, -35.121784)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="spikes4" unique_id=1139832258]
+position = Vector2(549.1429, 606.61475)
+scale = Vector2(25.321758, -35.22945)
+mesh = SubResource("PrismMesh_0vgru")
+
+[node name="death4" parent="spikes4" unique_id=561406571 instance=ExtResource("4_kukud")]
+position = Vector2(513, 608)
+rotation = -1.5707964
+scale = Vector2(0.04, 4)
+
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_gcmrh")]
-position = Vector2(-1, 80)
+position = Vector2(-107, 80)
+next_level_scene = ExtResource("3_0vgru")
 
 [node name="spikes" type="Node2D" parent="." unique_id=186516725]
 position = Vector2(-76, -103)
@@ -252,9 +340,18 @@ position = Vector2(551.49994, 625)
 scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_0vgru")
 
+[node name="death" parent="spikes" unique_id=1036183473 instance=ExtResource("4_kukud")]
+position = Vector2(522, 610)
+scale = Vector2(0.1, 2)
+
 [node name="spikes2" type="Node2D" parent="." unique_id=2081541929]
 position = Vector2(1072, 869)
 rotation = 3.1415927
+
+[node name="death2" parent="spikes2" unique_id=1729168525 instance=ExtResource("4_kukud")]
+position = Vector2(518.0001, 629.99994)
+rotation = 3.1415925
+scale = Vector2(0.10000001, 4)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="spikes2" unique_id=377941889]
 position = Vector2(485.49997, 625)
@@ -285,11 +382,5 @@ tile_set = SubResource("TileSet_wu405")
 position = Vector2(243.99994, 457)
 scale = Vector2(0.7, 0.7)
 JUMP_VELOCITY = -6000.0
-
-[node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_kukud")]
-position = Vector2(446.00003, 507)
-scale = Vector2(0.1, 2)
-
-[node name="death2" parent="." unique_id=1729168525 instance=ExtResource("4_kukud")]
-position = Vector2(554, 239)
-scale = Vector2(0.1, 4)
+move_left_action = "ui_left"
+move_right_action = "ui_right"

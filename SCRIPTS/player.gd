@@ -5,6 +5,8 @@ extends CharacterBody2D
 
 @export var SPEED : float = 300.0
 @export var JUMP_VELOCITY : float = -400.0
+@export var move_left_action: String = "move_left"
+@export var move_right_action: String = "move_right"
 
 var is_dead: bool = false
 
@@ -30,7 +32,8 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	#var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis(move_left_action, move_right_action)
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -51,7 +54,6 @@ func _physics_process(delta: float) -> void:
 #func _on_alp_body_entered(body: Node2D) -> void:
 	#is_dead = true
 	#animated.play("die")
-
 
 #func _on_alp_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	#is_dead = true

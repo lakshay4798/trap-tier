@@ -230,6 +230,7 @@ tile_set = SubResource("TileSet_6dw81")
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("2_gba10")]
 position = Vector2(35, 311)
 scale = Vector2(0.7, 0.7)
+JUMP_VELOCITY = -200.0
 move_left_action = "ui_left"
 move_right_action = "ui_right"
 

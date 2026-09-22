@@ -238,7 +238,6 @@ tile_set = SubResource("TileSet_hhea8")
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("3_sqqdj")]
 position = Vector2(444.99997, 375)
 scale = Vector2(0.7, 0.7)
-JUMP_VELOCITY = -2000.0
 move_left_action = "ui_right"
 move_right_action = "ui_left"
 

@@ -223,7 +223,7 @@ sources/0 = SubResource("TileSetAtlasSource_1y8me")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1595966247]
 offset_right = 1277.0
 offset_bottom = 716.0
-color = Color(0.4630682, 0.4630682, 0.4630682, 1)
+color = Color(0.63539076, 0.63539076, 0.63539076, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_k5m06")]
 position = Vector2(1, -33)

@@ -14,4 +14,3 @@ func _on_body_entered(body: Node2D) -> void:
 				return
 			await get_tree().create_timer(1.5).timeout
 			door.global_position = reset_position
-			queue_free()

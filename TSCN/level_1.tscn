@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c15iqdb7nhwum" path="res://TSCN/floortrap.tscn" id="3_rws7c"]
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="4_s1vte"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_ukf5u"]
-[ext_resource type="Script" uid="uid://ddg1y0xxdx47b" path="res://SCRIPTS/area_2d.gd" id="5_qudvi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x3mwa"]
 shader = ExtResource("4_s1vte")
@@ -417,9 +416,6 @@ texture = ExtResource("2_rws7c")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rws7c")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv1m0"]
-size = Vector2(53, 123)
-
 [node name="level_1" type="Node2D" unique_id=1314346721]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=264093216]
@@ -452,13 +448,3 @@ tile_set = SubResource("TileSet_ukf5u")
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_ukf5u")]
 position = Vector2(667, 679)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=2103513996]
-visible = false
-script = ExtResource("5_qudvi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=249832229]
-position = Vector2(210, 357)
-shape = SubResource("RectangleShape2D_rv1m0")
-
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

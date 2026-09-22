@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_sqqdj"]
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="1_vuppm"]
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="2_1m2o5"]
+[ext_resource type="PackedScene" uid="uid://dxihpmebewmf4" path="res://TSCN/level_6.tscn" id="2_wt7wa"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_sqqdj"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_1m2o5"]
 
@@ -226,6 +227,8 @@ color = Color(1, 0.6760076, 0.52945, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_sqqdj")]
 position = Vector2(-306, -17)
+close_speed = 1.5
+next_level_scene = ExtResource("2_wt7wa")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1106429902]
 material = SubResource("ShaderMaterial_wt7wa")

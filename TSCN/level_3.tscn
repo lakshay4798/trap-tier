@@ -431,6 +431,10 @@ move_right_action = "ui_right"
 position = Vector2(624, 619)
 scale = Vector2(0.1, 3)
 
+[node name="death2" parent="." unique_id=857062915 instance=ExtResource("4_u5he2")]
+position = Vector2(608, 741.00006)
+scale = Vector2(3.1, 3)
+
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=506220419]
 material = SubResource("ShaderMaterial_btvct")
 tile_map_data = PackedByteArray("AAAmABoAAAABAAMAAAAnABoAAAABAAMAAAA=")

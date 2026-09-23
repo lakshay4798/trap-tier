@@ -46,15 +46,3 @@ func _physics_process(delta: float) -> void:
 	elif direction == -1.0:
 		animated.flip_h = true
 	move_and_slide()
-
-
-
-
-
-#func _on_alp_body_entered(body: Node2D) -> void:
-	#is_dead = true
-	#animated.play("die")
-
-#func _on_alp_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	#is_dead = true
-	#animated.play("die")

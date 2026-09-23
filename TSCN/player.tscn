@@ -113,7 +113,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ghd"]
-size = Vector2(44, 78)
+size = Vector2(37, 78)
 
 [node name="player" type="CharacterBody2D" unique_id=2030552630]
 script = ExtResource("1_onrkg")
@@ -124,9 +124,10 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_2hs0m")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.08774821
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715380799]
-position = Vector2(-1, -1)
+position = Vector2(1.5, -1)
 shape = SubResource("RectangleShape2D_n7ghd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=663394107]

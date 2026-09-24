@@ -351,7 +351,7 @@ scale = Vector2(0.1, 1)
 [node name="doortrigger" parent="." unique_id=839245385 instance=ExtResource("5_p5uqc")]
 position = Vector2(1140, 431)
 stay_in_trap_position = true
-trap_position = Vector2(-900, -40)
+trap_position = Vector2(-950, -40)
 reset_position = Vector2(0, 0)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=587402715]

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated : AnimatedSprite2D = $AnimatedSprite2D
 @onready var color : ColorRect = $CanvasLayer/ColorRect
-
+@onready var player = $"."
 @export var SPEED : float = 300.0
 @export var JUMP_VELOCITY : float = -400.0
 @export var move_left_action: String = "move_left"
@@ -10,10 +10,10 @@ extends CharacterBody2D
 
 var is_dead: bool = false
 
-
+#
 #func _input(event: InputEvent) -> void:
-	#if Input.is_key_pressed(KEY_SPACE):
-		#color.visible = true
+	#if Input.is_key_pressed(KEY_S):
+		#player.scale()
 
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:
@@ -30,9 +30,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	#var direction := Input.get_axis("ui_left", "ui_right")
+	if "level_4" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_S) or Input.is_action_pressed("ui_down"):
+			scale = Vector2(0.5, 0.4)
+		else:
+			scale = Vector2(1.0, 0.9)
+			
 	var direction := Input.get_axis(move_left_action, move_right_action)
 	if direction:
 		velocity.x = direction * SPEED

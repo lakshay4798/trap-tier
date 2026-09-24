@@ -1,6 +1,7 @@
 extends Area2D
 
-@onready var tile = $"../TileMapLayer2"
+#@onready var tile = $"../TileMapLayer2"
+
 func _ready() -> void:
 	pass 
 
@@ -10,7 +11,7 @@ func _on_body_entered(body: Node2D) -> void:
 		#var anim = body.get_node("AnimatedSprite2D")
 		#anim.play("die")
 		body.get_node("AnimatedSprite2D").visible = false
-		tile.clear()
+		#tile.clear()
 		# Find the particle node and trigger the explosion burst
 		var particles = body.get_node("deathparticles")
 		if particles:

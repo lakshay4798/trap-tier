@@ -617,9 +617,9 @@ scale = Vector2(0.09, 4)
 
 [node name="spikes7" type="Node2D" parent="." unique_id=2050977357]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(953, 529)
+position = Vector2(1049, 966)
 rotation = -3.1415925
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 1)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="spikes7" unique_id=650745107]
 position = Vector2(485.49997, 625)
@@ -664,8 +664,9 @@ tile_map_data = PackedByteArray("AAAoAAwAAAAFAAUAAAAoAA0AAAAFAAUAAAAoAA4AAAAFAAU
 tile_set = SubResource("TileSet_ogoxk")
 
 [node name="Label" type="Label" parent="." unique_id=1092709863]
-offset_left = 868.0
+offset_left = 208.0
 offset_top = 223.0
 offset_right = 1410.0
 offset_bottom = 527.0
-text = "one spikes is fakee !!!!!!!"
+text = "                                                                                                                                                           one spikes is fakee !!!!!!!
+press S for small"

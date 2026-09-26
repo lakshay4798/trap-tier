@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dn7ji2w8lb5un"]
 
 [ext_resource type="Script" uid="uid://c10wm4b8owetl" path="res://SCRIPTS/death.gd" id="1_vl20q"]
+[ext_resource type="AudioStream" uid="uid://bwfyal7sv3jw2" path="res://ASSET/death.mp3" id="2_x1beq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1itl"]
 
@@ -10,5 +11,8 @@ script = ExtResource("1_vl20q")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357930964]
 scale = Vector2(40, 1)
 shape = SubResource("RectangleShape2D_r1itl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1248802282]
+stream = ExtResource("2_x1beq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

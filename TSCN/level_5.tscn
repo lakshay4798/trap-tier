@@ -244,3 +244,11 @@ move_right_action = "ui_left"
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_1m2o5")]
 position = Vector2(580, 722)
 scale = Vector2(2, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1750748587]
+offset_left = 535.0
+offset_top = 42.0
+offset_right = 626.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.99999684, 0.5165521, 0.30715337, 1)
+text = "be careful!!!"

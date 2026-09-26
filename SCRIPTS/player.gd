@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var door = $"../door"
 @onready var animated : AnimatedSprite2D = $AnimatedSprite2D
 @onready var color : ColorRect = $CanvasLayer/ColorRect
 @onready var player = $"."
@@ -35,6 +36,12 @@ func _physics_process(delta: float) -> void:
 			scale = Vector2(0.5, 0.4)
 		else:
 			scale = Vector2(1.0, 0.9)
+	if "level_5" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_SPACE):
+			velocity.y = JUMP_VELOCITY * 0
+			door.global_position = Vector2(190,270)
+		#else:
+			#return
 			
 	var direction := Input.get_axis(move_left_action, move_right_action)
 	if direction:

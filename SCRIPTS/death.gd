@@ -1,6 +1,7 @@
 extends Area2D
 
 #@onready var tile = $"../TileMapLayer2"
+@onready var death = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	pass 
@@ -12,9 +13,12 @@ func _on_body_entered(body: Node2D) -> void:
 		#anim.play("die")
 		body.get_node("AnimatedSprite2D").visible = false
 		#tile.clear()
-		# Find the particle node and trigger the explosion burst
+
 		var particles = body.get_node("deathparticles")
 		if particles:
 			particles.emitting = true
+			death.play()
 		await get_tree().create_timer(2.0).timeout
 		get_tree().reload_current_scene()
+		
+		

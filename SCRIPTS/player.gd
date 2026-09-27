@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var door = $"../door"
 @onready var animated : AnimatedSprite2D = $AnimatedSprite2D
-@onready var color : ColorRect = $CanvasLayer/ColorRect
+#@onready var color : ColorRect = $CanvasLayer/ColorRect
 @onready var player = $"."
 @export var SPEED : float = 300.0
 @export var JUMP_VELOCITY : float = -400.0

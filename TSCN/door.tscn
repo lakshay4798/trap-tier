@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ckxwu2efa3hvi"]
 
 [ext_resource type="Script" uid="uid://csbv31debm8pv" path="res://SCRIPTS/door.gd" id="1_kg27j"]
+[ext_resource type="AudioStream" uid="uid://c445wjsbvobls" path="res://ASSET/door sound.mp3" id="2_uvgn3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukf5u"]
 bg_color = Color(1, 1, 1, 1)
@@ -28,5 +29,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ukf5u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1661611195]
 position = Vector2(990, 412)
 shape = SubResource("RectangleShape2D_ukf5u")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2146159033]
+stream = ExtResource("2_uvgn3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

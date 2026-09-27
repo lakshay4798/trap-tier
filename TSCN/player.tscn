@@ -117,6 +117,8 @@ size = Vector2(37, 78)
 
 [node name="player" type="CharacterBody2D" unique_id=2030552630]
 script = ExtResource("1_onrkg")
+move_left_action = "ui_left"
+move_right_action = "ui_right"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1475716399]
 texture_filter = 1
@@ -129,14 +131,6 @@ frame_progress = 0.08774821
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715380799]
 position = Vector2(1.5, -1)
 shape = SubResource("RectangleShape2D_n7ghd")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=663394107]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1174716112]
-visible = false
-offset_right = 1299.0
-offset_bottom = 744.0
-color = Color(0, 0, 0, 0.27450982)
 
 [node name="deathparticles" type="CPUParticles2D" parent="." unique_id=442686474]
 emitting = false

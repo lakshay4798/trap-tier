@@ -67,7 +67,7 @@ func _on_body_entered(body: Node2D) -> void:
 			door_art = find_child("DoorArch")
 		if door_art and door_art is Control:
 			body.global_position.x = door_art.global_position.x + (door_art.size.x / 2.0)
-
+			
 		var fade_layer = CanvasLayer.new()
 		var fade_rect = ColorRect.new()
 		fade_rect.color = Color.BLACK
@@ -89,6 +89,8 @@ func _on_body_entered(body: Node2D) -> void:
 			
 		tween.parallel().tween_property(fade_rect, "modulate:a", 1.0, close_speed)
 			
+		
+		
 		if next_level_scene:
 			await get_tree().create_timer(2.0).timeout
 			get_tree().call_deferred("change_scene_to_packed", next_level_scene)

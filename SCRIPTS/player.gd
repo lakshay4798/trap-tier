@@ -51,8 +51,13 @@ func _physics_process(delta: float) -> void:
 		
 
 
+
 	if direction == 1.0:
 		animated.flip_h = false
 	elif direction == -1.0:
 		animated.flip_h = true
+		
+	#floor_snap_length = 32.0
+	#platform_on_leave = 2
+	#
 	move_and_slide()

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cfaev5afc4aap"]
+
+[ext_resource type="Script" uid="uid://jg6dtxdnsd8u" path="res://TSCN/shrinkmechanism.gd" id="1_mmgwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r137b"]
+size = Vector2(74, 42)
+
+[node name="shrinkmechanism" type="Area2D" unique_id=2005720728]
+script = ExtResource("1_mmgwe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1581281423]
+shape = SubResource("RectangleShape2D_r137b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

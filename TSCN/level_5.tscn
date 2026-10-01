@@ -227,7 +227,6 @@ color = Color(1, 0.6534794, 0.5125454, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_sqqdj")]
 position = Vector2(-257, -17)
-close_speed = 1.5
 next_level_scene = ExtResource("2_wt7wa")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1106429902]

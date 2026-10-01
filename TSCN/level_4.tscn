@@ -528,6 +528,7 @@ scale = Vector2(0.04, 4)
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_gcmrh")]
 position = Vector2(-30, 60)
 next_level_scene = ExtResource("3_0vgru")
+wrong_door = true
 
 [node name="spikes" type="Node2D" parent="." unique_id=186516725]
 modulate = Color(0, 0, 0, 1)
@@ -655,8 +656,6 @@ tile_set = SubResource("TileSet_wu405")
 position = Vector2(212.99998, 486)
 scale = Vector2(0.7, 0.7)
 JUMP_VELOCITY = -6000.0
-move_left_action = "ui_left"
-move_right_action = "ui_right"
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=539266170]
 position = Vector2(700, 0)

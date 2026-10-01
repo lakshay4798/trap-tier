@@ -18,7 +18,5 @@ func _on_body_entered(body: Node2D) -> void:
 		if particles:
 			particles.emitting = true
 			death.play()
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.4).timeout
 		get_tree().reload_current_scene()
-		
-		

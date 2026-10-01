@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY : float = -400.0
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
+@onready var shrink = $"../shrinkmechanism"
 
 var is_dead: bool = false
 

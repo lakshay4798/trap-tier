@@ -8,14 +8,9 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY : float = -400.0
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
-@onready var shrink = $"../shrinkmechanism"
 
 var is_dead: bool = false
 
-#
-#func _input(event: InputEvent) -> void:
-	#if Input.is_key_pressed(KEY_S):
-		#player.scale()
 
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:
@@ -37,10 +32,19 @@ func _physics_process(delta: float) -> void:
 			scale = Vector2(0.5, 0.4)
 		else:
 			scale = Vector2(1.0, 0.9)
+	if "level_8" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_S) or Input.is_action_pressed("ui_down"):
+			scale = Vector2(0.1, 0.1)
+		else:
+			scale = Vector2(3.0, 0.9)
 	if "level_5" in get_tree().current_scene.name.to_lower():
 		if Input.is_key_pressed(KEY_SPACE):
 			velocity.y = JUMP_VELOCITY * 0
 			door.global_position = Vector2(190,270)
+	if "level_8" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_ENTER):
+			velocity.y = JUMP_VELOCITY * 0
+			door.global_position = Vector2(-500,-330)
 		#else:
 			#return
 			

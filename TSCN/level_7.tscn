@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="1_xe1rg"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="2_mq4dt"]
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="3_2yaa2"]
+[ext_resource type="PackedScene" uid="uid://dmqe1f2au1bmm" path="res://TSCN/level_8.tscn" id="3_434vy"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_knok3"]
 [ext_resource type="PackedScene" uid="uid://cfaev5afc4aap" path="res://TSCN/shrinkmechanism.tscn" id="6_434vy"]
 
@@ -469,6 +470,7 @@ position = Vector2(58, -83)
 [node name="door2" parent="." unique_id=1402368126 instance=ExtResource("1_mq4dt")]
 visible = false
 position = Vector2(-422, -311)
+next_level_scene = ExtResource("3_434vy")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=335040834]
 material = SubResource("ShaderMaterial_434vy")
@@ -494,6 +496,8 @@ tile_map_data = PackedByteArray("AAAhACEAAAAEAAMAAAAiACEAAAAEAAMAAAAjACEAAAAEAAM
 tile_set = SubResource("TileSet_434vy")
 
 [node name="Label" type="Label" parent="." unique_id=1665725711]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1453.0
+offset_bottom = 25.0
 text = "for level 7 put another door in top , or for next level mechnaism is like use opposite of level 4 like press S for small , and for another llevel mechanism is trying fake doors more than 3 doors."

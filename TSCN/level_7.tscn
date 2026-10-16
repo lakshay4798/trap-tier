@@ -438,7 +438,7 @@ color = Color(8.637907, 8.637907, 8.637907, 1)
 [node name="spikes" type="Node2D" parent="." unique_id=763181644]
 visible = false
 modulate = Color(0, 0, 0, 1)
-position = Vector2(65, -252)
+position = Vector2(32, -252)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="spikes" unique_id=1056166889]
 position = Vector2(485.49997, 625)

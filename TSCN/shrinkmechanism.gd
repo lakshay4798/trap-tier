@@ -17,6 +17,8 @@ func _on_body_entered(body: Node2D) -> void:
 			tween.tween_property(tile_layer, "scale:x", shrink_to_scale_x, collapse_duration)
 			tween.parallel().tween_property(tile_layer, "position:x", tile_layer.position.x + target_move_x, collapse_duration)
 			spikes.visible = true
-			tile.visible = true
-			realdoor.visible = true
 			queue_free() 
+		if spikes.visible:
+			tile.visible = true
+			#await get_tree().create_timer(2).timeout
+			realdoor.visible = true

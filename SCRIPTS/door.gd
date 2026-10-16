@@ -6,13 +6,15 @@ extends Area2D
 @export var close_speed : float = 2
 @export var next_level_scene : PackedScene
 @export var wrong_door : bool = false
-
+@onready var door = $"."
 
 func _ready() -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
+		if wrong_door:
+			return
 		body.set_physics_process(false)
 		
 		var door_art = find_child("Panel")

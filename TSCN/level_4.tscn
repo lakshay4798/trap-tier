@@ -528,7 +528,6 @@ scale = Vector2(0.04, 4)
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_gcmrh")]
 position = Vector2(-30, 60)
 next_level_scene = ExtResource("3_0vgru")
-wrong_door = true
 
 [node name="spikes" type="Node2D" parent="." unique_id=186516725]
 modulate = Color(0, 0, 0, 1)

@@ -8,15 +8,23 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY : float = -400.0
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
-@onready var level8label = $"../Label"
 
+@onready var label8level = $"../Label2"
+@onready var level8door = $"../door"
+@onready var level8door2 = $"../door2"
+var level8label: Label = null
 var is_dead: bool = false
 
 func _ready() -> void:
-	#for level 8
-	level8label.visible = false
-	await get_tree().create_timer(5.0).timeout
-	level8label.visible = true
+	#LEVEL8
+	level8door2.visible = false
+	label8level.visible = false
+	if get_tree().current_scene.name.to_lower() == "level_8":
+		level8label = get_node_or_null("../Label")
+		if level8label:
+			level8label.visible = false
+			await get_tree().create_timer(5.0).timeout
+			level8label.visible = true
 
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:
@@ -49,7 +57,14 @@ func _physics_process(delta: float) -> void:
 			scale = Vector2(4.0, 0.5)
 		if Input.is_key_pressed(KEY_ENTER):
 			velocity.y = JUMP_VELOCITY * 0
-			door.global_position = Vector2(-300,200)
+			door.global_position = Vector2(-3000,200)
+			label8level.visible = true
+			player.set_physics_process(false)
+			await get_tree().create_timer(3.0).timeout
+			level8door2.visible = true
+			await get_tree().create_timer(7.0).timeout
+			player.set_physics_process(true)
+			
 		#else:
 			#return
 			

@@ -16,7 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if wrong_door:
 			return
 		body.set_physics_process(false)
-		
+
 		var door_art = find_child("Panel")
 		if not door_art:
 			door_art = find_child("DoorArch")

@@ -9,22 +9,32 @@ extends CharacterBody2D
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
 
-@onready var label8level = $"../Label2"
-@onready var level8door = $"../door"
-@onready var level8door2 = $"../door2"
-var level8label: Label = null
 var is_dead: bool = false
 
+#LEVEL8
+var Label8level: Label = null
+var level8door: Node2D = null
+var level8door2: Node2D = null
+var level8label: Label = null
+
 func _ready() -> void:
-	#LEVEL8
-	level8door2.visible = false
-	label8level.visible = false
+	# #LEVEL8
 	if get_tree().current_scene.name.to_lower() == "level_8":
-		level8label = get_node_or_null("../Label")
+		level8label = get_node_or_null("../Label") as Label
+		level8door = get_node_or_null("../door") as Node2D
+		level8door2 = get_node_or_null("../door2") as Node2D
+		Label8level = get_node_or_null("../Label2") as Label
+		
+		if level8door2:
+			level8door2.visible = false
 		if level8label:
 			level8label.visible = false
-			await get_tree().create_timer(5.0).timeout
+		if Label8level:
+			Label8level.visible = false
+		await get_tree().create_timer(5.0).timeout
+		if is_instance_valid(level8label):
 			level8label.visible = true
+
 
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:
@@ -57,17 +67,27 @@ func _physics_process(delta: float) -> void:
 			scale = Vector2(4.0, 0.5)
 		if Input.is_key_pressed(KEY_ENTER):
 			velocity.y = JUMP_VELOCITY * 0
-			door.global_position = Vector2(-3000,200)
-			label8level.visible = true
-			player.set_physics_process(false)
+			if level8door:
+				level8door.global_position = Vector2(-3000, 200)
+			if level8label:
+				level8label.visible = true
+			set_physics_process(false)
 			await get_tree().create_timer(3.0).timeout
-			level8door2.visible = true
+			if Label8level:
+				Label8level.visible = true
+			if level8door2:
+				level8door2.visible = true
 			await get_tree().create_timer(7.0).timeout
-			player.set_physics_process(true)
-			
-		#else:
-			#return
-			
+			set_physics_process(true)
+	if "level_9" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_SPACE) and Input.is_action_just_pressed("ui_accept"):
+			if get_tree().current_scene.name.to_lower() == "level_9":
+				velocity.y = -100.0  # Flap/jump in mid-air
+			#elif is_on_floor():
+				#velocity.y = -900.0  # Standard floor jump
+
+
+
 	var direction := Input.get_axis(move_left_action, move_right_action)
 	if direction:
 		velocity.x = direction * SPEED
@@ -82,5 +102,5 @@ func _physics_process(delta: float) -> void:
 		
 	#floor_snap_length = 32.0
 	#platform_on_leave = 2
-	#
+	
 	move_and_slide()

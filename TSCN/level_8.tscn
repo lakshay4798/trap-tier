@@ -225,6 +225,7 @@ position = Vector2(218, 208)
 wrong_door = true
 
 [node name="door2" parent="." unique_id=1302662477 instance=ExtResource("1_ureuf")]
+visible = false
 position = Vector2(-949, 207)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1815400050]

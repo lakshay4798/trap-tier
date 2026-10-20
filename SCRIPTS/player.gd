@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var door = $"../door"
 @onready var animated : AnimatedSprite2D = $AnimatedSprite2D
+#@onready var timer = $"../AudioStreamPlayer2D"
 #@onready var color : ColorRect = $CanvasLayer/ColorRect
 @onready var player = $"."
 @export var SPEED : float = 300.0
@@ -9,9 +10,11 @@ extends CharacterBody2D
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
 
+
 var is_dead: bool = false
 
 #LEVEL8
+var timer: AudioStreamPlayer2D = null
 var Label8level: Label = null
 var level8door: Node2D = null
 var level8door2: Node2D = null
@@ -24,6 +27,7 @@ func _ready() -> void:
 		level8door = get_node_or_null("../door") as Node2D
 		level8door2 = get_node_or_null("../door2") as Node2D
 		Label8level = get_node_or_null("../Label2") as Label
+		timer = get_node_or_null("../AudioStreamPlayer2D") as AudioStreamPlayer2D
 		
 		if level8door2:
 			level8door2.visible = false
@@ -72,6 +76,7 @@ func _physics_process(delta: float) -> void:
 			if level8label:
 				level8label.visible = true
 			set_physics_process(false)
+			timer.play()
 			await get_tree().create_timer(3.0).timeout
 			if Label8level:
 				Label8level.visible = true
@@ -79,6 +84,7 @@ func _physics_process(delta: float) -> void:
 				level8door2.visible = true
 			await get_tree().create_timer(7.0).timeout
 			set_physics_process(true)
+
 	if "level_9" in get_tree().current_scene.name.to_lower():
 		if Input.is_key_pressed(KEY_SPACE) and Input.is_action_just_pressed("ui_accept"):
 			if get_tree().current_scene.name.to_lower() == "level_9":

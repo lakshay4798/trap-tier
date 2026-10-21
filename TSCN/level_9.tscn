@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="2_1g71i"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_432oe"]
 [ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="4_1g71i"]
+[ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="5_432oe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2mq6"]
 texture = ExtResource("2_1g71i")
@@ -228,7 +229,7 @@ tile_map_data = PackedByteArray("AAAAACIAAAAFAAMAAAAAACMAAAAFAAQAAAABACIAAAAGAAM
 tile_set = SubResource("TileSet_6ofs4")
 
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("3_432oe")]
-position = Vector2(30, 502)
+position = Vector2(119.99999, 444)
 scale = Vector2(0.7, 0.7)
 
 [node name="Label" type="Label" parent="." unique_id=829960454]
@@ -247,3 +248,13 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("4_1g71i")
 theme_override_font_sizes/font_size = 20
 text = "YOU HAVE TO PRESS SPACE!!!!"
+
+[node name="Label2" type="Label" parent="." unique_id=1586909899]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "some level make with th refernce of exactly leevel devil "
+
+[node name="death" parent="." unique_id=1474996204 instance=ExtResource("5_432oe")]
+position = Vector2(653, 746)
+scale = Vector2(2, 1)

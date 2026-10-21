@@ -10,7 +10,7 @@ extends CharacterBody2D
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
 
-
+var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_dead: bool = false
 
 #LEVEL8
@@ -38,6 +38,8 @@ func _ready() -> void:
 		await get_tree().create_timer(5.0).timeout
 		if is_instance_valid(level8label):
 			level8label.visible = true
+	if "level_10" in get_tree().current_scene.name.to_lower():
+		gravity = 10000.0
 
 
 func _physics_process(delta: float) -> void:
@@ -91,6 +93,10 @@ func _physics_process(delta: float) -> void:
 				velocity.y = -100.0  # Flap/jump in mid-air
 			#elif is_on_floor():
 				#velocity.y = -900.0  # Standard floor jump
+	#
+	#if "level_10" in get_tree().current_scene.name.to_lower():
+		#if Input.is_key_pressed(KEY_SPACE):
+			#velocity.y = -500.0
 
 
 

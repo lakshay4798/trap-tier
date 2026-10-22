@@ -97,7 +97,13 @@ func _physics_process(delta: float) -> void:
 	#if "level_10" in get_tree().current_scene.name.to_lower():
 		#if Input.is_key_pressed(KEY_SPACE):
 			#velocity.y = -500.0
-
+	if "endscene" in get_tree().current_scene.name.to_lower():
+		#set_physics_process(false)
+		if Input.is_key_pressed(KEY_ENTER):
+			await get_tree().create_timer(1.0).timeout
+			get_tree().change_scene_to_file("res://TSCN/level_1.tscn")
+		else:
+			return
 
 
 	var direction := Input.get_axis(move_left_action, move_right_action)

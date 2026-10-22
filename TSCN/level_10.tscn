@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="2_qxw11"]
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="3_qxw11"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_6g6nm"]
+[ext_resource type="PackedScene" uid="uid://bdjbu4wt6pfyp" path="res://TSCN/endscene.tscn" id="4_cx6xq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6g6nm"]
 texture = ExtResource("1_ly5s6")
@@ -168,7 +169,8 @@ position = Vector2(36.000008, 432.99997)
 scale = Vector2(0.7, 0.7)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("3_qxw11")]
-position = Vector2(243, 270)
+position = Vector2(-836, 23)
+next_level_scene = ExtResource("4_cx6xq")
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_6g6nm")]
 position = Vector2(542, -18)

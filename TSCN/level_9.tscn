@@ -250,8 +250,10 @@ theme_override_font_sizes/font_size = 20
 text = "YOU HAVE TO PRESS SPACE!!!!"
 
 [node name="Label2" type="Label" parent="." unique_id=1586909899]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 85.0
+offset_top = 1.0
+offset_right = 1160.0
+offset_bottom = 56.0
 theme_override_font_sizes/font_size = 40
 text = "some level make with th refernce of exactly leevel devil "
 

@@ -38,8 +38,8 @@ func _ready() -> void:
 		await get_tree().create_timer(5.0).timeout
 		if is_instance_valid(level8label):
 			level8label.visible = true
-	if "level_10" in get_tree().current_scene.name.to_lower():
-		gravity = 10000.0
+	#if "level_10" in get_tree().current_scene.name.to_lower():
+		#gravity = 10000.0
 
 
 func _physics_process(delta: float) -> void:
@@ -94,9 +94,11 @@ func _physics_process(delta: float) -> void:
 			#elif is_on_floor():
 				#velocity.y = -900.0  # Standard floor jump
 	#
-	#if "level_10" in get_tree().current_scene.name.to_lower():
+	if "level_10" in get_tree().current_scene.name.to_lower():
 		#if Input.is_key_pressed(KEY_SPACE):
-			#velocity.y = -500.0
+			#velocity.y = -50.0
+		if Input.is_key_pressed(KEY_T):
+			velocity.y = -800.0
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):

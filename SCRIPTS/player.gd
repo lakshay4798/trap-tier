@@ -20,6 +20,10 @@ var level8door: Node2D = null
 var level8door2: Node2D = null
 var level8label: Label = null
 
+#level11
+#var level11fake :TileMapLayer = null
+
+
 func _ready() -> void:
 	# #LEVEL8
 	if get_tree().current_scene.name.to_lower() == "level_8":
@@ -93,12 +97,21 @@ func _physics_process(delta: float) -> void:
 				velocity.y = -100.0  # Flap/jump in mid-air
 			#elif is_on_floor():
 				#velocity.y = -900.0  # Standard floor jump
-	#
 	if "level_10" in get_tree().current_scene.name.to_lower():
 		#if Input.is_key_pressed(KEY_SPACE):
 			#velocity.y = -50.0
 		if Input.is_key_pressed(KEY_T):
 			velocity.y = -800.0
+
+	if "level_11" in get_tree().current_scene.name.to_lower():
+		if Input.is_action_just_pressed("ui_accept"):
+			var temp = move_left_action
+			move_left_action = move_right_action
+			move_right_action = temp
+			await get_tree().create_timer(20.0).timeout
+			$"../TileMapLayer2".visible = true
+		#await get_tree().create_timer(10.0).timeout
+		#door.global_position = Vector2(200,200)
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):

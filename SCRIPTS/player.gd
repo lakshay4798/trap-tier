@@ -112,6 +112,10 @@ func _physics_process(delta: float) -> void:
 			$"../TileMapLayer2".visible = true
 		#await get_tree().create_timer(10.0).timeout
 		#door.global_position = Vector2(200,200)
+	if "level_12" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_SPACE) and Input.is_action_just_pressed("ui_accept"):
+			if get_tree().current_scene.name.to_lower() == "level_12":
+				velocity.y = -100.0
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):

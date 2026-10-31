@@ -60,6 +60,9 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	#restart levels
+	#if Input.is_key_pressed(KEY_R):
+		#get_tree().reload_current_scene()
 
 	if "level_4" in get_tree().current_scene.name.to_lower():
 		if Input.is_key_pressed(KEY_S) or Input.is_action_pressed("ui_down"):

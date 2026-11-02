@@ -45,6 +45,10 @@ func _ready() -> void:
 	#if "level_10" in get_tree().current_scene.name.to_lower():
 		#gravity = 10000.0
 
+func _input(event: InputEvent) -> void:
+	if Input.is_key_pressed(KEY_R):
+		#get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://TSCN/level_1.tscn")
 
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:
@@ -119,6 +123,9 @@ func _physics_process(delta: float) -> void:
 		if Input.is_key_pressed(KEY_SPACE) and Input.is_action_just_pressed("ui_accept"):
 			if get_tree().current_scene.name.to_lower() == "level_12":
 				velocity.y = -100.0
+	if "level_13" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_SPACE):
+			velocity.y = +1000
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):

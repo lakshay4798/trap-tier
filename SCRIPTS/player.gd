@@ -151,3 +151,7 @@ func _physics_process(delta: float) -> void:
 	#platform_on_leave = 2
 	
 	move_and_slide()
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://TSCN/level_1.tscn")

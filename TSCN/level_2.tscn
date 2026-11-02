@@ -245,3 +245,15 @@ position = Vector2(905, 445)
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("6_jdukd")]
 position = Vector2(499, 739)
 scale = Vector2(3, 1)
+
+[node name="Label" type="Label" parent="." unique_id=433284751]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 605.0
+offset_top = 17.0
+offset_right = 675.0
+offset_bottom = 40.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+text = "slowww!!"

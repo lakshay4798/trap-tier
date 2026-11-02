@@ -249,9 +249,17 @@ tile_set = SubResource("TileSet_dj732")
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("2_wbq4x")]
 modulate = Color(0, 1, 0, 1)
 position = Vector2(37, 665)
-SPEED = null
-JUMP_VELOCITY = null
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("3_wbq4x")]
 modulate = Color(0.78039217, 1, 1, 1)
 position = Vector2(240, 266)
+
+[node name="Button" type="Button" parent="." unique_id=87171233]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 411.0
+offset_right = 700.0
+offset_bottom = 442.0
+text = "RESTART"
+
+[connection signal="pressed" from="Button" to="player" method="_on_button_pressed"]

@@ -192,7 +192,7 @@ offset_top = 228.0
 offset_right = 963.0
 offset_bottom = 251.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "next level like (wall all , narrow space, double tap krna padega baar baar flappy bird ki tarah )"
+text = "next level like (wall all , narrow space, double tap krna padega baar baar flappy bird ki tarah ) (iske agli level m door hi jameen k sath ud jayega with platfiorm jo ki hoga collision shape se)"
 
 [node name="Label2" type="Label" parent="." unique_id=650239971]
 offset_left = 585.0

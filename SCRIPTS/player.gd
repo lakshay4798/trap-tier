@@ -126,6 +126,15 @@ func _physics_process(delta: float) -> void:
 	if "level_13" in get_tree().current_scene.name.to_lower():
 		if Input.is_key_pressed(KEY_SPACE):
 			velocity.y = +1000
+	if "level_14" in get_tree().current_scene.name.to_lower():
+		#velocity.y = -10
+		#if Input.is_key_pressed(KEY_SPACE):
+			#velocity.y = +
+		if Input.is_key_pressed(KEY_V):
+			player.visible = true
+			else:
+				return
+
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):
@@ -155,3 +164,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://TSCN/level_1.tscn")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	player.visible = false
+	#await get_tree().create_timer(1.5).timeout
+	#player.visible = true
+	#await get_tree().create_timer(1.5).timeout
+	#player.visible = false

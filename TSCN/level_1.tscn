@@ -209,6 +209,10 @@ texture = ExtResource("2_rws7c")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hn12h")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2o4vc"]
+shader = ExtResource("4_s1vte")
+shader_parameter/level_color = Color(0, 0, 0, 1)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rws7c"]
 texture = ExtResource("2_rws7c")
 0:0/0 = 0
@@ -421,7 +425,6 @@ sources/0 = SubResource("TileSetAtlasSource_rws7c")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=264093216]
 offset_right = 1281.0
 offset_bottom = 721.0
-color = Color(0.5006195, 0.5006196, 0.5006196, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_rv1m0")]
 position = Vector2(2, 0)
@@ -429,7 +432,7 @@ next_level_scene = ExtResource("2_2o4vc")
 
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("1_1ltoh")]
 position = Vector2(42.000015, 307)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.6, 0.6)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=871482912]
 material = SubResource("ShaderMaterial_x3mwa")
@@ -440,8 +443,9 @@ tile_set = SubResource("TileSet_ihfcg")
 position = Vector2(648, 344)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=732093579]
+material = SubResource("ShaderMaterial_2o4vc")
 position = Vector2(-86, 509)
-tile_map_data = PackedByteArray("AAA4AAkAAAADAAEAAAA4AAoAAAAEAAIAAAA5AAkAAAADAAEAAAA5AAoAAAAEAAIAAAA4AAsAAAAEAAIAAAA5AAsAAAAEAAIAAAA4AP3/AAADAAAAAAA4AP7/AAADAAAAAAA5AP3/AAADAAAAAAA5AP7/AAADAAAAAAA6AP3/AAADAAAAAAA6AP7/AAADAAAAAAA3AP3/AAADAAAAAAA3AP7/AAADAAAAAAA4APz/AAADAAAAAAA5APz/AAADAAAAAAA6AAkAAAAFAAAAAAA6AAoAAAAFAAAAAAA6AAsAAAAFAAAAAAA3AAgAAAAFAAAAAAA4AAgAAAAFAAAAAAA5AAgAAAAFAAAAAAA6AAgAAAAFAAAAAAA7AAgAAAAFAAAAAAA=")
+tile_map_data = PackedByteArray("AAA4AAkAAAADAAEAAAA4AAoAAAAEAAIAAAA4AAsAAAAEAAIAAAA4AP7/AAADAAAAAAA5AP7/AAADAAAAAAA6AP7/AAADAAAAAAA4APz/AAADAAAAAAA5APz/AAADAAAAAAA6AAkAAAAFAAAAAAA6AAoAAAAFAAAAAAA6AAsAAAAFAAAAAAA3AAgAAAAFAAAAAAA6AAgAAAAFAAAAAAA7AAgAAAAFAAAAAAA3AP3/AAADAAAAAAA4AP3/AAADAAAAAAA5AP3/AAADAAAAAAA6AP3/AAADAAAAAAA4AAgAAAAFAAAAAAA5AAgAAAAFAAAAAAA5AAkAAAADAAEAAAA5AAoAAAAEAAIAAAA5AAsAAAAEAAIAAAA3AP7/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_ukf5u")
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_ukf5u")]

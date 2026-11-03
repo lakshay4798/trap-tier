@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_qcyjy"]
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="1_tbjak"]
-[ext_resource type="PackedScene" uid="uid://bdjbu4wt6pfyp" path="res://TSCN/endscene.tscn" id="2_g5cd7"]
+[ext_resource type="PackedScene" uid="uid://cokagr3xo2ul4" path="res://TSCN/level_14.tscn" id="2_g5cd7"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_qcyjy"]
 [ext_resource type="PackedScene" uid="uid://cx6elp0hquj4r" path="res://TSCN/movingtrack.tscn" id="3_tbjak"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_au4ul"]

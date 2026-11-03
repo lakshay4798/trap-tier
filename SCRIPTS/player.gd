@@ -12,6 +12,7 @@ extends CharacterBody2D
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_dead: bool = false
+var label_timer = 8.0
 
 #LEVEL8
 var timer: AudioStreamPlayer2D = null
@@ -132,8 +133,12 @@ func _physics_process(delta: float) -> void:
 			#velocity.y = +
 		if Input.is_key_pressed(KEY_V):
 			player.visible = true
-			else:
-				return
+		if label_timer> 0:
+			$"../Label".visible = false
+			label_timer -= delta
+		else:
+			$"../Label".visible = true
+		
 
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)

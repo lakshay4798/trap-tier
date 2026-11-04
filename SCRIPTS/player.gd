@@ -109,7 +109,7 @@ func _physics_process(delta: float) -> void:
 		#if Input.is_key_pressed(KEY_SPACE):
 			#velocity.y = -50.0
 		if Input.is_key_pressed(KEY_T):
-			velocity.y = -800.0
+			velocity.y = -900.0
 
 	if "level_11" in get_tree().current_scene.name.to_lower():
 		if Input.is_action_just_pressed("ui_accept"):
@@ -126,6 +126,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = -100.0
 	if "level_13" in get_tree().current_scene.name.to_lower():
 		if Input.is_key_pressed(KEY_SPACE):
+			#player.visible = false
 			velocity.y = +1000
 	if "level_14" in get_tree().current_scene.name.to_lower():
 		#velocity.y = -10
@@ -138,8 +139,8 @@ func _physics_process(delta: float) -> void:
 			label_timer -= delta
 		else:
 			$"../Label".visible = true
-		
-
+	if "level_15" in get_tree().current_scene.name.to_lower():
+		pass
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dla05yw4cnsws"]
+
+[ext_resource type="Script" uid="uid://c5oytemcjb1nk" path="res://SCRIPTS/press.gd" id="1_4ur57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir6ww"]
+size = Vector2(104, 264)
+
+[node name="press" type="Area2D" unique_id=1018578952]
+script = ExtResource("1_4ur57")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2086619770]
+shape = SubResource("RectangleShape2D_ir6ww")
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

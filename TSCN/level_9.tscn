@@ -219,7 +219,7 @@ sources/0 = SubResource("TileSetAtlasSource_s2mq6")
 offset_left = 1.0
 offset_right = 1281.0
 offset_bottom = 720.0
-color = Color(0.7380309, 0.73803085, 0.73803085, 1)
+color = Color(0.40146008, 0.40146017, 0.4014599, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_smll6")]
 position = Vector2(247, -51)
@@ -249,14 +249,6 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("4_1g71i")
 theme_override_font_sizes/font_size = 20
 text = "YOU HAVE TO PRESS SPACE!!!!"
-
-[node name="Label2" type="Label" parent="." unique_id=1586909899]
-offset_left = 85.0
-offset_top = 1.0
-offset_right = 1160.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 40
-text = "some level make with th refernce of exactly leevel devil "
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("5_432oe")]
 position = Vector2(653, 746)

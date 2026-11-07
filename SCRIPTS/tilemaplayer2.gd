@@ -1,6 +1,6 @@
 extends TileMapLayer
 
-@export var press_speed = 80.0
+@export var press_speed = 100.0
 @export var max_crush_distance : float = 210.0
 
 var original_position:Vector2
@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 				position.y += press_speed *delta
 			else:
 				current_state = "waiting"
-				wait_timer = 4.0
+				wait_timer = 2.0
 		"waiting":
 			if wait_timer > 0:
 				wait_timer -=delta

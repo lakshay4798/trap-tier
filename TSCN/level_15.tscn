@@ -3,6 +3,7 @@
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="1_bia3i"]
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_ir6ww"]
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="1_jf1qd"]
+[ext_resource type="PackedScene" uid="uid://bdjbu4wt6pfyp" path="res://TSCN/endscene.tscn" id="2_u5gax"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_ir6ww"]
 [ext_resource type="Script" uid="uid://di86gynuex8cs" path="res://SCRIPTS/tilemaplayer2.gd" id="4_n807p"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="5_xxl3t"]
@@ -417,6 +418,7 @@ color = Color(1, 0.59000003, 0.59000003, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_ir6ww")]
 position = Vector2(106, -22)
+next_level_scene = ExtResource("2_u5gax")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1017182719]
 material = SubResource("ShaderMaterial_n807p")
@@ -437,7 +439,8 @@ position = Vector2(1561, 108)
 shape = SubResource("RectangleShape2D_xxl3t")
 
 [node name="death" parent="TileMapLayer2" unique_id=1474996204 instance=ExtResource("5_xxl3t")]
-position = Vector2(628, 249)
+position = Vector2(624, 249)
+scale = Vector2(0.97, 1)
 
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("3_ir6ww")]
 position = Vector2(31, 368)

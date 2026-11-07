@@ -49,7 +49,8 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_R):
 		#get_tree().reload_current_scene()
-		get_tree().change_scene_to_file("res://TSCN/level_1.tscn")
+		await get_tree().create_timer(0.3).timeout
+		get_tree().change_scene_to_file("res://TSCN/start.tscn")
 
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:

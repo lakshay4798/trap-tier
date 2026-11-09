@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://261e6a3et4vb" path="res://TSCN/level_5.tscn" id="3_0vgru"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_gcmrh"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_kukud"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="7_ogoxk"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_0vgru"]
 
@@ -668,3 +669,12 @@ offset_right = 1410.0
 offset_bottom = 527.0
 text = "                                                                                                                                                           one spikes is fakee !!!!!!!
 press S for small"
+
+[node name="Label2" type="Label" parent="." unique_id=769725939]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("7_ogoxk")
+theme_override_font_sizes/font_size = 15
+text = "level 4"

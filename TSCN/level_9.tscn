@@ -219,7 +219,7 @@ sources/0 = SubResource("TileSetAtlasSource_s2mq6")
 offset_left = 1.0
 offset_right = 1281.0
 offset_bottom = 720.0
-color = Color(0.40146008, 0.40146017, 0.4014599, 1)
+color = Color(1, 1, 0.6901961, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_smll6")]
 position = Vector2(247, -51)
@@ -246,6 +246,7 @@ offset_bottom = 190.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1749846, 0.17498463, 0.1749846, 1)
 theme_override_fonts/font = ExtResource("4_1g71i")
 theme_override_font_sizes/font_size = 20
 text = "YOU HAVE TO PRESS SPACE!!!!"
@@ -253,3 +254,12 @@ text = "YOU HAVE TO PRESS SPACE!!!!"
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("5_432oe")]
 position = Vector2(653, 746)
 scale = Vector2(2, 1)
+
+[node name="Label2" type="Label" parent="." unique_id=2014510567]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("4_1g71i")
+theme_override_font_sizes/font_size = 15
+text = "level 9"

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="3_qxw11"]
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="4_1bd26"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_6g6nm"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="7_v45j7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v45j7"]
 shader = ExtResource("4_1bd26")
@@ -201,3 +202,12 @@ offset_right = 749.0
 offset_bottom = 131.0
 theme_override_colors/font_color = Color(0, 0.6614302, 0.6836698, 1)
 text = "press T for high jump"
+
+[node name="Label3" type="Label" parent="." unique_id=1286499075]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("7_v45j7")
+theme_override_font_sizes/font_size = 15
+text = "level 10"

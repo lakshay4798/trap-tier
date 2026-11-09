@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="2_up3xl"]
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="3_up3xl"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_hwxn1"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="7_begsg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_83kxw"]
 shader = ExtResource("1_xgkfo")
@@ -437,3 +438,12 @@ visible = false
 position = Vector2(-110, 0)
 tile_map_data = PackedByteArray("AABAABIAAAADAAEAAABAABMAAAADAAEAAABAABQAAAADAAEAAABAABUAAAADAAEAAAA=")
 tile_set = SubResource("TileSet_83kxw")
+
+[node name="Label2" type="Label" parent="." unique_id=2039523305]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("7_begsg")
+theme_override_font_sizes/font_size = 15
+text = "level 11"

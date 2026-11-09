@@ -172,7 +172,7 @@ script = ExtResource("1_a533b")
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
-color = Color(1, 0.9790476, 0.442858, 1)
+color = Color(1, 0.98039216, 0.44313726, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("2_vi0qa")]
 position = Vector2(441.99997, 178.99998)

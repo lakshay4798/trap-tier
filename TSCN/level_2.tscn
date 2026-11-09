@@ -7,6 +7,7 @@
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="3_jdukd"]
 [ext_resource type="PackedScene" uid="uid://cotkx3homathg" path="res://TSCN/doortrigger.tscn" id="4_40b80"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="6_jdukd"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="8_otqva"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4h8km"]
 shader = ExtResource("3_jdukd")
@@ -257,3 +258,12 @@ offset_bottom = 40.0
 grow_horizontal = 2
 size_flags_horizontal = 0
 text = "slowww!!"
+
+[node name="Label2" type="Label" parent="." unique_id=952756671]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("8_otqva")
+theme_override_font_sizes/font_size = 15
+text = "level 2"

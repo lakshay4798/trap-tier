@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dmqe1f2au1bmm" path="res://TSCN/level_8.tscn" id="3_434vy"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_knok3"]
 [ext_resource type="PackedScene" uid="uid://cfaev5afc4aap" path="res://TSCN/shrinkmechanism.tscn" id="6_434vy"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="8_tg21h"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_0vgru"]
 
@@ -433,7 +434,7 @@ sources/0 = SubResource("TileSetAtlasSource_2yaa2")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=108227409]
 offset_right = 1280.0
 offset_bottom = 728.0
-color = Color(8.637907, 8.637907, 8.637907, 1)
+color = Color(8.637329, 8.637329, 8.637329, 1)
 
 [node name="spikes" type="Node2D" parent="." unique_id=763181644]
 visible = false
@@ -466,6 +467,7 @@ scale = Vector2(0.1, 2)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_mq4dt")]
 position = Vector2(58, -83)
+wrong_door = true
 
 [node name="door2" parent="." unique_id=1402368126 instance=ExtResource("1_mq4dt")]
 visible = false
@@ -501,3 +503,12 @@ offset_top = 2.0
 offset_right = 1453.0
 offset_bottom = 25.0
 text = "for level 7 put another door in top , or for next level mechnaism is like use opposite of level 4 like press S for small , and for another llevel mechanism is trying fake doors more than 3 doors."
+
+[node name="Label2" type="Label" parent="." unique_id=1195597012]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("8_tg21h")
+theme_override_font_sizes/font_size = 15
+text = "level 7"

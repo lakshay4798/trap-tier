@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dxihpmebewmf4" path="res://TSCN/level_6.tscn" id="2_wt7wa"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_sqqdj"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_1m2o5"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="7_tb5fe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wt7wa"]
 shader = ExtResource("1_vuppm")
@@ -251,3 +252,12 @@ offset_right = 626.0
 offset_bottom = 65.0
 theme_override_colors/font_color = Color(0.99999684, 0.5165521, 0.30715337, 1)
 text = "be careful!!!"
+
+[node name="Label2" type="Label" parent="." unique_id=103959546]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("7_tb5fe")
+theme_override_font_sizes/font_size = 15
+text = "level 5"

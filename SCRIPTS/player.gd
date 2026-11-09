@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
 @onready var door = $"../door"
+@onready var door16 = $"../door"
 @onready var animated : AnimatedSprite2D = $AnimatedSprite2D
 #@onready var timer = $"../AudioStreamPlayer2D"
 #@onready var color : ColorRect = $CanvasLayer/ColorRect
 @onready var player = $"."
+@onready var click = $AudioStreamPlayer2D
 @export var SPEED : float = 300.0
 @export var JUMP_VELOCITY : float = -400.0
 @export var move_left_action: String = "move_left"
@@ -140,8 +142,23 @@ func _physics_process(delta: float) -> void:
 			label_timer -= delta
 		else:
 			$"../Label".visible = true
-	if "level_15" in get_tree().current_scene.name.to_lower():
-		pass
+
+
+	if "level_16" in get_tree().current_scene.name.to_lower():
+		velocity.x = 0
+		animated.animation = "idle"
+		#animated.flip_h = true
+		var direction = Input.get_axis("ui_left","ui_right")
+		if direction and door16:
+			door16.position.x += direction * 300 * delta
+	else:
+		var direction = Input.get_axis("ui_left", "ui_right")
+		if direction:
+			velocity.x = direction *SPEED
+		else:
+			velocity.x = move_toward(velocity.x ,0,SPEED)
+
+
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):
@@ -163,14 +180,11 @@ func _physics_process(delta: float) -> void:
 	elif direction == -1.0:
 		animated.flip_h = true
 		
-	#floor_snap_length = 32.0
-	#platform_on_leave = 2
-	
-	move_and_slide()
 
 
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://TSCN/level_1.tscn")
+	if not "level_16" in get_tree().current_scene.name.to_lower():
+		if is_inside_tree():
+			move_and_slide()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -179,3 +193,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	#player.visible = true
 	#await get_tree().create_timer(1.5).timeout
 	#player.visible = false
+
+
+func _on_button_pressed() -> void:
+	click.play()
+	await get_tree().create_timer(0.3).timeout
+	get_tree().change_scene_to_file("res://TSCN/start.tscn")
+	

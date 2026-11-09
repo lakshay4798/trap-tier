@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c15iqdb7nhwum" path="res://TSCN/floortrap.tscn" id="3_rws7c"]
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="4_s1vte"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_ukf5u"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="8_s1vte"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x3mwa"]
 shader = ExtResource("4_s1vte")
@@ -450,3 +451,12 @@ tile_set = SubResource("TileSet_ukf5u")
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_ukf5u")]
 position = Vector2(667, 679)
+
+[node name="Label" type="Label" parent="." unique_id=1757230747]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("8_s1vte")
+theme_override_font_sizes/font_size = 15
+text = "level 1"

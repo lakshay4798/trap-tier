@@ -11,6 +11,10 @@ extends Area2D
 func _ready() -> void:
 	pass
 
+#for level 16
+#func _physics_process(delta: float) -> void:
+	#pass
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		if wrong_door:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://be6er6rvqc18v" path="res://ASSET/Assets.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://vkvk4b7ito5m" path="res://SCRIPTS/player.gd" id="1_onrkg"]
+[ext_resource type="AudioStream" uid="uid://bvb7wdir55wm5" path="res://ASSET/mixkit-mouse-click-close-1113.wav" id="3_ljt5j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
 atlas = ExtResource("1_4flbx")
@@ -144,3 +145,6 @@ initial_velocity_max = 200.0
 scale_amount_min = 7.0
 scale_amount_max = 15.0
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=288083254]
+stream = ExtResource("3_ljt5j")

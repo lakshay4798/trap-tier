@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="2_gba10"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="3_6dw81"]
 [ext_resource type="PackedScene" uid="uid://cotkx3homathg" path="res://TSCN/doortrigger.tscn" id="5_p5uqc"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="7_7bxtu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gba10"]
 texture = ExtResource("1_khtcx")
@@ -325,7 +326,7 @@ sources/0 = SubResource("TileSetAtlasSource_p5uqc")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2003258332]
 offset_right = 1271.0
 offset_bottom = 727.0
-color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+color = Color(1, 0.98039216, 0.44313726, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_64rwb")]
 position = Vector2(224, -44)
@@ -357,3 +358,12 @@ reset_position = Vector2(0, 0)
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=587402715]
 tile_map_data = PackedByteArray("AAAIABkAAAAEAAIAAAAIABoAAAAEAAIAAAAIABsAAAAEAAIAAAAIABwAAAAEAAIAAAAIAB0AAAAEAAIAAAAJABkAAAAEAAIAAAAJABoAAAAEAAIAAAAJABsAAAAEAAIAAAAJABwAAAAEAAIAAAAJAB0AAAAEAAIAAAAIAB4AAAAEAAIAAAAIAB8AAAAEAAIAAAAJAB4AAAAEAAIAAAAJAB8AAAAEAAIAAAAIACAAAAAEAAMAAAAIACEAAAAEAAMAAAAIACIAAAAEAAMAAAAJACAAAAAEAAMAAAAJACEAAAAEAAMAAAAJACIAAAAEAAMAAAAIACcAAAAEAAMAAAAIACgAAAAEAAMAAAAIACkAAAAEAAMAAAAIACoAAAAEAAMAAAAIACsAAAAEAAMAAAAIACwAAAAEAAMAAAAIAC0AAAAEAAMAAAAJACcAAAAEAAMAAAAJACgAAAAEAAMAAAAJACkAAAAEAAMAAAAJACoAAAAEAAMAAAAJACsAAAAEAAMAAAAJACwAAAAEAAMAAAAJAC0AAAAEAAMAAAAIACYAAAAEAAMAAAAJACYAAAAEAAMAAAAJACUAAAAEAAMAAAAIACUAAAAEAAMAAAAIACMAAAAEAAMAAAAJACMAAAAEAAMAAAAIACQAAAAEAAMAAAAJACQAAAAEAAMAAAA=")
 tile_set = SubResource("TileSet_c14y5")
+
+[node name="Label2" type="Label" parent="." unique_id=614462737]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 41.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("7_7bxtu")
+theme_override_font_sizes/font_size = 15
+text = "level 6"

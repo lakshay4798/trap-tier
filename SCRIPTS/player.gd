@@ -53,7 +53,9 @@ func _input(event: InputEvent) -> void:
 		#get_tree().reload_current_scene()
 		await get_tree().create_timer(0.3).timeout
 		get_tree().change_scene_to_file("res://TSCN/start.tscn")
-
+	elif Input.is_key_pressed(KEY_F):
+		await get_tree().create_timer(0.15).timeout
+		get_tree().reload_current_scene()
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:
 		animated.animation = "run"
@@ -141,8 +143,7 @@ func _physics_process(delta: float) -> void:
 			$"../Label".visible = false
 			label_timer -= delta
 		else:
-			$"../Label".visible = true
-
+			$"../Label".visible = true 
 
 	if "level_16" in get_tree().current_scene.name.to_lower():
 		velocity.x = 0

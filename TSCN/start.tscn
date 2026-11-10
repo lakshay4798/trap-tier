@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://dyle45ib8c4s5" path="res://ASSET/Pikselator Wide.ttf" id="3_rc7u3"]
 [ext_resource type="AudioStream" uid="uid://bvb7wdir55wm5" path="res://ASSET/mixkit-mouse-click-close-1113.wav" id="5_cikqm"]
 [ext_resource type="Texture2D" uid="uid://be6er6rvqc18v" path="res://ASSET/Assets.png" id="6_v28g6"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="8_1e4ap"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a533b"]
 shader = ExtResource("1_3comb")
@@ -159,6 +160,23 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ea77o"]
+bg_color = Color(0, 0, 0, 0.63529414)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlijw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7iavr"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqanl"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="START" type="Control" unique_id=244690259]
 layout_mode = 3
 anchors_preset = 15
@@ -177,6 +195,13 @@ color = Color(1, 0.98039216, 0.44313726, 1)
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("2_vi0qa")]
 position = Vector2(441.99997, 178.99998)
 scale = Vector2(0.7, 0.7)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=890070475]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.5137255)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1070049640]
 material = SubResource("ShaderMaterial_a533b")
@@ -262,6 +287,29 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ip7l6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1e4ap")
 text = "PLAY"
 
+[node name="Button2" type="Button" parent="." unique_id=134064141]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.625
+offset_top = 26.5
+offset_right = 69.625
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.99215686, 0.9490196, 0.72156864, 1)
+theme_override_fonts/font = ExtResource("3_rc7u3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vi0qa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ip7l6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1e4ap")
+text = "settings"
+
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=1357356634]
 stream = ExtResource("5_cikqm")
 
@@ -338,4 +386,62 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.0503201
 
+[node name="infowindow" type="Panel" parent="." unique_id=540997460]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.5
+offset_top = -176.5
+offset_right = 202.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ea77o")
+
+[node name="Label" type="Label" parent="infowindow" unique_id=1214654462]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.5
+offset_top = -100.0
+offset_right = 143.5
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_1e4ap")
+theme_override_font_sizes/font_size = 25
+text = "     PRESS R - FOR RESTART
+     PRESS T -  FOR HIGH JUMP
+     PRESS S - FOR SMALL
+     PRESS V - FOR VISIBLE
+ PRESS F - FOR REFRESH LEVEL
+
+          *SPIKES KILL YOU*
+*INVISIBLE TRAPS ARE THERE*
+*IN SOME LEVEL KEYS CHANGE*"
+
+[node name="back" type="Button" parent="infowindow" unique_id=345120490]
+layout_mode = 0
+offset_left = 21.5
+offset_top = 1.5
+offset_right = 75.5
+offset_bottom = 32.5
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0.43137255, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.43137255, 1)
+theme_override_fonts/font = ExtResource("3_rc7u3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xlijw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7iavr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tqanl")
+text = "BACK"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="infowindow/back" to="." method="_on_back_pressed"]

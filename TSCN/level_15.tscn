@@ -410,6 +410,18 @@ sources/0 = SubResource("TileSetAtlasSource_xxl3t")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxl3t"]
 size = Vector2(768, 144.1875)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6r1r"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_15" type="Node2D" unique_id=1217815927]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1878874399]
@@ -451,13 +463,14 @@ scale = Vector2(0.6, 0.6)
 position = Vector2(620, 729)
 scale = Vector2(2, 1)
 
-[node name="Label2" type="Label" parent="." unique_id=994555155]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label3" type="Label" parent="." unique_id=1690453717]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("8_g6r1r")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_g6r1r")
 text = "level 15"
 
 [connection signal="body_entered" from="TileMapLayer2/crushzone" to="TileMapLayer2" method="_on_crushzone_body_entered"]

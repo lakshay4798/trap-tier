@@ -429,6 +429,18 @@ texture = ExtResource("1_xe1rg")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2yaa2")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg21h"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_7" type="Node2D" unique_id=1228545355]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=108227409]
@@ -504,11 +516,12 @@ offset_right = 1453.0
 offset_bottom = 25.0
 text = "for level 7 put another door in top , or for next level mechnaism is like use opposite of level 4 like press S for small , and for another llevel mechanism is trying fake doors more than 3 doors."
 
-[node name="Label2" type="Label" parent="." unique_id=1195597012]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label2" type="Label" parent="." unique_id=1427452595]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("8_tg21h")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_tg21h")
 text = "level 7"

@@ -215,6 +215,17 @@ texture = ExtResource("1_mxbtt")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lioih")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgpr3"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_8" type="Node2D" unique_id=315020911]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=426507211]
@@ -266,11 +277,12 @@ text = "YOU HAVE TO WAIT FOR 10 SECONDS TO MOVE"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=10161416]
 stream = ExtResource("6_gx2eo")
 
-[node name="Label3" type="Label" parent="." unique_id=281523500]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label3" type="Label" parent="." unique_id=1646432690]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("5_1yff5")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_pgpr3")
 text = "level 8"

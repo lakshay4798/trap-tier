@@ -219,6 +219,17 @@ texture = ExtResource("2_1m2o5")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tb5fe")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tb5fe"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_5" type="Node2D" unique_id=804669034]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=69247531]
@@ -253,11 +264,12 @@ offset_bottom = 65.0
 theme_override_colors/font_color = Color(0.99999684, 0.5165521, 0.30715337, 1)
 text = "be careful!!!"
 
-[node name="Label2" type="Label" parent="." unique_id=103959546]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label2" type="Label" parent="." unique_id=2141002088]
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 61.0
+offset_bottom = 35.0
 theme_override_fonts/font = ExtResource("7_tb5fe")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_tb5fe")
 text = "level 5"

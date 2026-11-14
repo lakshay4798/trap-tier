@@ -213,6 +213,17 @@ texture = ExtResource("2_1g71i")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s2mq6")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2mq6"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_9" type="Node2D" unique_id=894876497]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=163021519]
@@ -255,11 +266,12 @@ text = "YOU HAVE TO PRESS SPACE!!!!"
 position = Vector2(653, 746)
 scale = Vector2(2, 1)
 
-[node name="Label2" type="Label" parent="." unique_id=2014510567]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label2" type="Label" parent="." unique_id=405033679]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("4_1g71i")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_s2mq6")
 text = "level 9"

@@ -421,6 +421,17 @@ texture = ExtResource("2_rws7c")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rws7c")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1vte"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_1" type="Node2D" unique_id=1314346721]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=264093216]
@@ -452,11 +463,12 @@ tile_set = SubResource("TileSet_ukf5u")
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_ukf5u")]
 position = Vector2(667, 679)
 
-[node name="Label" type="Label" parent="." unique_id=1757230747]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label2" type="Label" parent="." unique_id=1520858999]
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 58.0
+offset_bottom = 35.0
 theme_override_fonts/font = ExtResource("8_s1vte")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_s1vte")
 text = "level 1"

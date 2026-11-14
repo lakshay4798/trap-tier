@@ -381,6 +381,17 @@ texture = ExtResource("1_rulug")
 [sub_resource type="TileSet" id="TileSet_btvct"]
 sources/0 = SubResource("TileSetAtlasSource_6hfwg")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btvct"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_3" type="Node2D" unique_id=1757060885]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=36755400]
@@ -439,11 +450,12 @@ material = SubResource("ShaderMaterial_btvct")
 tile_map_data = PackedByteArray("AAAmABoAAAABAAMAAAAnABoAAAABAAMAAAA=")
 tile_set = SubResource("TileSet_btvct")
 
-[node name="Label2" type="Label" parent="." unique_id=1981698352]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label2" type="Label" parent="." unique_id=1761236492]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 45.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("7_btvct")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_btvct")
 text = "level 3"

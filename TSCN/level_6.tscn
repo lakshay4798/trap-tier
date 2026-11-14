@@ -346,7 +346,7 @@ position = Vector2(545, 716)
 scale = Vector2(3, 1)
 
 [node name="death2" parent="." unique_id=1869142995 instance=ExtResource("3_6dw81")]
-position = Vector2(150, 583)
+position = Vector2(147, 583)
 scale = Vector2(0.1, 1)
 
 [node name="doortrigger" parent="." unique_id=839245385 instance=ExtResource("5_p5uqc")]

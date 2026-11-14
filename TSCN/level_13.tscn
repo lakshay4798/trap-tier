@@ -215,6 +215,18 @@ texture = ExtResource("1_tbjak")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_g5cd7")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdkx7"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_13" type="Node2D" unique_id=2026425546]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1666717995]
@@ -231,7 +243,7 @@ tile_map_data = PackedByteArray("AAAAACwAAAABAAAAAAABACwAAAACAAAAAAACACwAAAADAAA
 tile_set = SubResource("TileSet_cdkx7")
 
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("3_qcyjy")]
-position = Vector2(25, 40)
+position = Vector2(25, 54)
 scale = Vector2(0.6, 0.6)
 
 [node name="death" parent="." unique_id=1474996204 instance=ExtResource("4_au4ul")]
@@ -249,11 +261,12 @@ offset_bottom = 38.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Try SPACE"
 
-[node name="Label2" type="Label" parent="." unique_id=853410452]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label2" type="Label" parent="." unique_id=1723999951]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("7_cdkx7")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_cdkx7")
 text = "level 13"

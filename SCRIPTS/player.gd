@@ -12,6 +12,8 @@ extends CharacterBody2D
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
 
+#@onready var info :Panel = $infowindow
+
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_dead: bool = false
 var label_timer = 8.0
@@ -48,7 +50,7 @@ func _ready() -> void:
 	#if "level_10" in get_tree().current_scene.name.to_lower():
 		#gravity = 10000.0
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_R):
 		#get_tree().reload_current_scene()
 		await get_tree().create_timer(0.3).timeout
@@ -56,6 +58,10 @@ func _input(event: InputEvent) -> void:
 	elif Input.is_key_pressed(KEY_F):
 		await get_tree().create_timer(0.15).timeout
 		get_tree().reload_current_scene()
+	#elif Input.is_key_pressed(KEY_C):
+		#info.visible = true
+
+
 func _physics_process(delta: float) -> void:
 	if velocity.x> 1 or velocity.x <-1:
 		animated.animation = "run"
@@ -148,6 +154,8 @@ func _physics_process(delta: float) -> void:
 	if "level_16" in get_tree().current_scene.name.to_lower():
 		velocity.x = 0
 		animated.animation = "idle"
+		if Input.is_key_pressed(KEY_SPACE):
+			animated.animation = "die"
 		#animated.flip_h = true
 		var direction = Input.get_axis("ui_left","ui_right")
 		if direction and door16:
@@ -158,6 +166,13 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction *SPEED
 		else:
 			velocity.x = move_toward(velocity.x ,0,SPEED)
+
+	if "level_18" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_SPACE):
+			velocity.y = -700.0
+		if Input.is_key_pressed(KEY_L):
+			#$"../ColorRect".color = whit
+			pass
 
 
 	if "endscene" in get_tree().current_scene.name.to_lower():
@@ -188,8 +203,8 @@ func _physics_process(delta: float) -> void:
 			move_and_slide()
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	player.visible = false
+func _on_area_2d_body_entered(_body: Node2D) -> void:
+	player.visible  = false
 	#await get_tree().create_timer(1.5).timeout
 	#player.visible = true
 	#await get_tree().create_timer(1.5).timeout

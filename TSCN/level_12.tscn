@@ -206,6 +206,18 @@ sources/0 = SubResource("TileSetAtlasSource_pq0jl")
 
 [sub_resource type="PrismMesh" id="PrismMesh_86p05"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg4m5"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_12" type="Node2D" unique_id=1509662546]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2002381688]
@@ -507,11 +519,12 @@ theme_override_colors/font_color = Color(0.35006392, 0.35006395, 0.35006392, 1)
 theme_override_font_sizes/font_size = 10
 text = "(invisible spikes also)"
 
-[node name="Label3" type="Label" parent="." unique_id=592012785]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 18.0
+[node name="Label3" type="Label" parent="." unique_id=1013343339]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("6_mg4m5")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_mg4m5")
 text = "level 12"

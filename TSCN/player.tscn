@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://be6er6rvqc18v" path="res://ASSET/Assets.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://vkvk4b7ito5m" path="res://SCRIPTS/player.gd" id="1_onrkg"]
 [ext_resource type="AudioStream" uid="uid://bvb7wdir55wm5" path="res://ASSET/mixkit-mouse-click-close-1113.wav" id="3_ljt5j"]
+[ext_resource type="AudioStream" uid="uid://bwfyal7sv3jw2" path="res://ASSET/death.mp3" id="4_o83p0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
 atlas = ExtResource("1_4flbx")
@@ -148,3 +149,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=288083254]
 stream = ExtResource("3_ljt5j")
+
+[node name="death" type="AudioStreamPlayer2D" parent="." unique_id=2008630924]
+stream = ExtResource("4_o83p0")

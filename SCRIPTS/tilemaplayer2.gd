@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 				position.y += press_speed *delta
 			else:
 				current_state = "waiting"
-				wait_timer = 2.0
+				wait_timer = 1.0
 		"waiting":
 			if wait_timer > 0:
 				wait_timer -=delta

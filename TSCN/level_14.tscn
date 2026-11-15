@@ -219,7 +219,7 @@ expand_margin_bottom = 2.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1259111060]
 offset_left = -1.0
-offset_right = 1279.0
+offset_right = 1296.0
 offset_bottom = 720.0
 color = Color(0.78521025, 0.99999994, 0.9957606, 1)
 

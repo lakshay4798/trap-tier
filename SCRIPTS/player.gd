@@ -182,17 +182,25 @@ func _physics_process(delta: float) -> void:
 			pass
 
 	if "level_19" in get_tree().current_scene.name.to_lower():
-		if Input.is_key_pressed(KEY_SPACE):
+		if Input.is_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_W):
+		#if Input.is_key_pressed(KEY_SPACE) and Input.is_key_pressed(KEY_W):
+			#with and in between two different input it means u have to press both to perform function
 			$death.play()
 			$deathparticles.emitting = true
 			$AnimatedSprite2D.visible = false
 			$CollisionShape2D.set_deferred("disabled", true)
 			set_physics_process(false)
 			
-			await get_tree().create_timer(1.0).timeout
+			await get_tree().create_timer(1.5).timeout
+			$"../Label".visible = true
 			
-
-
+	if "level_20" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_L):
+			scale = Vector2(9,0.6)
+		else:
+			scale = Vector2(0.6,0.6)
+	
+	
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
 		if Input.is_key_pressed(KEY_ENTER):

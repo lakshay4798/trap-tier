@@ -412,12 +412,12 @@ scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_31vo3")
 
 [node name="MeshInstance2D9" type="MeshInstance2D" parent="spikes2" unique_id=1036315490]
-position = Vector2(654.5, 625)
+position = Vector2(650.49994, 625)
 scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_31vo3")
 
 [node name="MeshInstance2D10" type="MeshInstance2D" parent="spikes2" unique_id=1852875264]
-position = Vector2(722.5, 625)
+position = Vector2(725.5, 625)
 scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_31vo3")
 
@@ -427,17 +427,17 @@ scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_31vo3")
 
 [node name="MeshInstance2D12" type="MeshInstance2D" parent="spikes2" unique_id=1011094862]
-position = Vector2(686.5, 625)
+position = Vector2(688.5, 625)
 scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_31vo3")
 
 [node name="MeshInstance2D13" type="MeshInstance2D" parent="spikes2" unique_id=438887537]
-position = Vector2(704.5, 625)
+position = Vector2(706.5, 625)
 scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_31vo3")
 
 [node name="MeshInstance2D14" type="MeshInstance2D" parent="spikes2" unique_id=1555297288]
-position = Vector2(741.5, 625)
+position = Vector2(746.5, 625)
 scale = Vector2(36.999992, -72.00001)
 mesh = SubResource("PrismMesh_31vo3")
 

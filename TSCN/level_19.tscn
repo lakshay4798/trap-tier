@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_v7pg6"]
 [ext_resource type="PackedScene" uid="uid://bdjbu4wt6pfyp" path="res://TSCN/endscene.tscn" id="2_tgi5n"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="4_tgi5n"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="6_6fonj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_elqx4"]
 shader = ExtResource("1_14m6m")
@@ -207,6 +208,18 @@ texture = ExtResource("1_p5d5r")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_14m6m")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pgk3"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_19" type="Node2D" unique_id=813672001]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=811660440]
@@ -226,3 +239,31 @@ tile_set = SubResource("TileSet_elqx4")
 position = Vector2(206.00002, 633)
 scale = Vector2(0.6, 0.6)
 JUMP_VELOCITY = -200.0
+
+[node name="Label2" type="Label" parent="." unique_id=789635488]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("6_6fonj")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_4pgk3")
+text = "level 19"
+
+[node name="Label" type="Label" parent="." unique_id=755273545]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 560.0
+offset_top = 310.0
+offset_right = 679.0
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_6fonj")
+text = "Press F for Refresh"

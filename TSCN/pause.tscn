@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://c5q7gx0c2ax3q"]
+
+[ext_resource type="Script" uid="uid://dcqfwv1hefkxf" path="res://SCRIPTS/pause.gd" id="1_25b4a"]
+[ext_resource type="FontFile" uid="uid://dyle45ib8c4s5" path="res://ASSET/Pikselator Wide.ttf" id="2_emluh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5y7cm"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+expand_margin_left = 70.0
+expand_margin_top = 20.0
+expand_margin_right = 70.0
+expand_margin_bottom = 20.0
+
+[node name="Pause" type="CanvasLayer" unique_id=485100653]
+process_mode = 3
+script = ExtResource("1_25b4a")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=472707685]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.18431373)
+
+[node name="Label" type="Label" parent="." unique_id=1988715779]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -60.0
+offset_right = 108.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_emluh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5y7cm")
+text = "PAUSED"
+
+[node name="Label2" type="Label" parent="." unique_id=1576252761]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.5
+offset_top = 19.0
+offset_right = 111.5
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_emluh")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_5y7cm")
+text = "PRESS P TO RESUME"

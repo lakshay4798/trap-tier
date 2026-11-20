@@ -12,7 +12,6 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY : float = -400.0
 @export var move_left_action: String = "move_left"
 @export var move_right_action: String = "move_right"
-
 #@onready var info :Panel = $infowindow
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -197,8 +196,11 @@ func _physics_process(delta: float) -> void:
 	if "level_20" in get_tree().current_scene.name.to_lower():
 		if Input.is_key_pressed(KEY_L):
 			scale = Vector2(9,0.6)
+		elif Input.is_key_pressed(KEY_S):
+			scale = Vector2(0.2,0.2)
 		else:
 			scale = Vector2(0.6,0.6)
+			
 	
 	
 	if "endscene" in get_tree().current_scene.name.to_lower():

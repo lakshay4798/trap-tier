@@ -188,7 +188,8 @@ script = ExtResource("1_a533b")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=238062124]
 layout_mode = 0
-offset_right = 1280.0
+offset_left = -1.0
+offset_right = 1279.0
 offset_bottom = 720.0
 color = Color(1, 0.98039216, 0.44313726, 1)
 
@@ -395,7 +396,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -205.5
-offset_top = -176.5
+offset_top = -196.0
 offset_right = 202.0
 offset_bottom = 135.0
 grow_horizontal = 2
@@ -409,17 +410,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -143.5
-offset_top = -100.0
-offset_right = 143.5
-offset_bottom = 100.0
+offset_left = -147.5
+offset_top = -139.5
+offset_right = 147.5
+offset_bottom = 147.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_1e4ap")
 theme_override_font_sizes/font_size = 25
 text = "     PRESS R - FOR RESTART
+     PRESS P - FOR PAUSE
      PRESS T -  FOR HIGH JUMP
      PRESS S - FOR SMALL
+     PRESS L - FOR LARGE
      PRESS V - FOR VISIBLE
  PRESS F - FOR REFRESH LEVEL
 

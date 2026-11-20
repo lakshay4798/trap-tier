@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="1_14m6m"]
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="1_p5d5r"]
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_v7pg6"]
-[ext_resource type="PackedScene" uid="uid://bdjbu4wt6pfyp" path="res://TSCN/endscene.tscn" id="2_tgi5n"]
+[ext_resource type="PackedScene" uid="uid://6kclqaj62kvd" path="res://TSCN/level_20.tscn" id="2_6fonj"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="4_tgi5n"]
 [ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="6_6fonj"]
 
@@ -228,7 +228,7 @@ offset_bottom = 720.0
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_v7pg6")]
 position = Vector2(132, 202)
-next_level_scene = ExtResource("2_tgi5n")
+next_level_scene = ExtResource("2_6fonj")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=367565575]
 material = SubResource("ShaderMaterial_elqx4")

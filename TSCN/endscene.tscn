@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="4_pxjd1"]
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="4_svcfn"]
 [ext_resource type="Texture2D" uid="uid://be6er6rvqc18v" path="res://ASSET/Assets.png" id="5_svcfn"]
+[ext_resource type="AudioStream" uid="uid://bh6hwb2cj0aof" path="res://ASSET/freesound_community-short-beep-countdown-81121.mp3" id="7_21lj3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dj732"]
 shader = ExtResource("4_svcfn")
@@ -316,5 +317,8 @@ autoplay = "idle"
 
 [node name="player" parent="." unique_id=2030552630 instance=ExtResource("2_wbq4x")]
 position = Vector2(-52, 501)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1146802790]
+stream = ExtResource("7_21lj3")
 
 [connection signal="pressed" from="Button" to="player" method="_on_button_pressed"]

@@ -445,6 +445,15 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7iavr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tqanl")
 text = "BACK"
 
+[node name="Label4" type="Label" parent="." unique_id=191130533]
+visible = false
+layout_mode = 0
+offset_left = 593.0
+offset_top = 415.0
+offset_right = 683.0
+offset_bottom = 1010.0
+text = "how to play"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="infowindow/back" to="." method="_on_back_pressed"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="1_hrgs3"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="2_8jjo3"]
-[ext_resource type="PackedScene" uid="uid://bdjbu4wt6pfyp" path="res://TSCN/endscene.tscn" id="3_cw1mw"]
+[ext_resource type="PackedScene" uid="uid://cxqolpxibfwpa" path="res://TSCN/level_21.tscn" id="3_cw1mw"]
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="3_msaqq"]
 [ext_resource type="Shader" uid="uid://wvq0nylpu10n" path="res://SCRIPTS/tilemap.gdshader" id="4_igo1y"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="5_rytre"]
@@ -376,14 +376,6 @@ position = Vector2(1008, 131)
 scale = Vector2(2, 1.5)
 trap_position = Vector2(18, 74)
 reset_position = Vector2(18, 74)
-
-[node name="Label2" type="Label" parent="." unique_id=990071136]
-offset_left = 75.0
-offset_top = 46.0
-offset_right = 298.0
-offset_bottom = 69.0
-text = "add pause button in all level 
-"
 
 [node name="Label4" type="Label" parent="." unique_id=1414081931]
 offset_left = 2.0

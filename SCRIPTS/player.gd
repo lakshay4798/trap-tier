@@ -201,7 +201,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			scale = Vector2(0.6,0.6)
 			
-	
+	if "level_22" in get_tree().current_scene.name.to_lower():
+		pass
 	
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)
@@ -229,7 +230,9 @@ func _physics_process(delta: float) -> void:
 	if not "level_16" in get_tree().current_scene.name.to_lower():
 		if is_inside_tree():
 			move_and_slide()
-
+#
+#func _doormove():
+	#player.scale = Vector2(4,1)
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	player.visible  = false
@@ -243,4 +246,3 @@ func _on_button_pressed() -> void:
 	click.play()
 	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://TSCN/start.tscn")
-	

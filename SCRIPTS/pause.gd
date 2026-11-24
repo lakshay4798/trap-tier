@@ -13,4 +13,3 @@ func _input(event: InputEvent) -> void:
 				return
 			get_tree().paused = not get_tree().paused
 			visible = get_tree().paused
-			

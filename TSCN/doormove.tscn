@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://581h7scnpilj"]
+
+[ext_resource type="Script" uid="uid://dgohs53ycj8em" path="res://SCRIPTS/doormove.gd" id="1_ihhr8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qexhv"]
+size = Vector2(185, 20)
+
+[node name="doormove" type="Area2D" unique_id=1219646293]
+script = ExtResource("1_ihhr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=520570119]
+position = Vector2(185, 633.5)
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_qexhv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

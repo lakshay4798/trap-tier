@@ -4,8 +4,6 @@ extends Area2D
 @export var trap_position: Vector2 = Vector2(-500, -30)
 @export var reset_position: Vector2 = Vector2(0, -30)
 
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		var door = get_tree().current_scene.find_child("door")

@@ -454,6 +454,14 @@ offset_right = 683.0
 offset_bottom = 1010.0
 text = "how to play"
 
+[node name="Label5" type="Label" parent="." unique_id=749317259]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.12005126, 0.12005126, 0.12005126, 1)
+text = "add song description (usme ye likhna h ki is game m bgm isliye nahi h kyuki ye ek trap game h isliye vrna song baar baar play hone se player frustrate ho jayega) 
+"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="infowindow/back" to="." method="_on_back_pressed"]

@@ -1,15 +1,37 @@
 extends Area2D
 
-
 @onready var doorsound = $AudioStreamPlayer2D
 @onready var panel = $Panel
 @export var close_speed : float = 2
 @export var next_level_scene : PackedScene
 @export var wrong_door : bool = false
 @onready var door = $"."
+@onready var start_y := position.y
+
+
+var can_move := false
+const SPEED = 300.0 
+var JUMP_VELOCITY = -250
+const GRAVITY = 980.0
+var velocity = Vector2.ZERO
 
 func _ready() -> void:
 	pass
+
+func _physics_process(delta: float) -> void:
+	if not can_move:
+		return
+	if position.y < start_y:
+		velocity.y += gravity * delta
+	else:
+		position.y = start_y
+		velocity.y = 0.0
+	if Input.is_action_just_pressed("ui_accept") and position.y >= start_y:
+		velocity.y = JUMP_VELOCITY
+	var direction := Input.get_axis("ui_left", "ui_right")
+	velocity.x = direction * SPEED
+	position += velocity * delta
+
 
 #for level 16
 #func _physics_process(delta: float) -> void:

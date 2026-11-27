@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cotkx3homathg"]
 
 [ext_resource type="Script" uid="uid://c5n47mlvah4mm" path="res://SCRIPTS/doortrigger.gd" id="1_aj2b1"]
+[ext_resource type="AudioStream" uid="uid://fmvmrrruwjnp" path="res://ASSET/fahhh_KcgAXfs.mp3" id="2_g7kbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5m06"]
 size = Vector2(49, 181)
@@ -10,5 +11,8 @@ script = ExtResource("1_aj2b1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=757761002]
 shape = SubResource("RectangleShape2D_k5m06")
+
+[node name="faah" type="AudioStreamPlayer2D" parent="." unique_id=173494403]
+stream = ExtResource("2_g7kbx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

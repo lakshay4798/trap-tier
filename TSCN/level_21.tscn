@@ -208,7 +208,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_atya0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rdc5r"]
-size = Vector2(64, 500.5)
+size = Vector2(64, 601.25)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdc5r"]
 bg_color = Color(0, 0, 0, 1)
@@ -305,7 +305,7 @@ scale = Vector2(0.6, 0.6)
 script = ExtResource("5_hci58")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikeshow" unique_id=533381472]
-position = Vector2(1059, 352)
+position = Vector2(1059, 301.625)
 shape = SubResource("RectangleShape2D_rdc5r")
 
 [node name="death" parent="." unique_id=1226751625 instance=ExtResource("1_post1")]

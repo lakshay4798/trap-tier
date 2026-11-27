@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcqfwv1hefkxf" path="res://SCRIPTS/pause.gd" id="1_25b4a"]
 [ext_resource type="FontFile" uid="uid://dyle45ib8c4s5" path="res://ASSET/Pikselator Wide.ttf" id="2_emluh"]
+[ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="3_5y7cm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5y7cm"]
 bg_color = Color(0, 0, 0, 1)
@@ -14,6 +15,42 @@ expand_margin_left = 70.0
 expand_margin_top = 20.0
 expand_margin_right = 70.0
 expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvi6x"]
+bg_color = Color(0, 0, 0, 0.63529414)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2k0v"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc8ql"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhve8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghwcb"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46h01"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5l1vx"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="Pause" type="CanvasLayer" unique_id=485100653]
 process_mode = 3
@@ -57,3 +94,98 @@ theme_override_fonts/font = ExtResource("2_emluh")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_5y7cm")
 text = "PRESS P TO RESUME"
+
+[node name="infowindow" type="Panel" parent="." unique_id=937163353]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = 61.0
+offset_right = 113.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qvi6x")
+
+[node name="Label" type="Label" parent="infowindow" unique_id=260417695]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.25
+offset_top = -104.0
+offset_right = 88.75
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_5y7cm")
+theme_override_font_sizes/font_size = 15
+text = "     PRESS R - FOR RESTART
+     PRESS P - FOR PAUSE
+     PRESS T -  FOR HIGH JUMP
+     PRESS S - FOR SMALL
+     PRESS L - FOR LARGE
+     PRESS V - FOR VISIBLE
+ PRESS F - FOR REFRESH LEVEL
+
+          *SPIKES KILL YOU*
+*INVISIBLE TRAPS ARE THERE*
+*IN SOME LEVEL KEYS CHANGE*"
+
+[node name="Label2" type="Label" parent="infowindow" unique_id=1937799764]
+visible = false
+layout_mode = 0
+offset_left = 26.5
+offset_top = 61.0
+offset_right = 401.5
+offset_bottom = 290.0
+theme_override_fonts/font = ExtResource("3_5y7cm")
+theme_override_font_sizes/font_size = 23
+text = "  I DO NOT ADD SOME FISHY BGM MUSIC
+         BECAUSE IT FRUSTRATE A LOT
+         IN LIKE MOSTLY IN TRAP GAME
+           SO I THINK U UNDERSTAND 
+
+I ADD ONLY SOME MAJOR SOUNDS LIKE
+DEATH, DOOR CLOSE, LEVEL TRANSITION
+                  AND MUCH MORE"
+metadata/_edit_lock_ = true
+
+[node name="BACK" type="Button" parent="infowindow" unique_id=805051942]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 2.0
+offset_right = 49.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("3_5y7cm")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_k2k0v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xc8ql")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhve8")
+text = "BACK"
+
+[node name="Button" type="Button" parent="." unique_id=1217588583]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 87.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("3_5y7cm")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ghwcb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_46h01")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5l1vx")
+text = "SETTINGS"
+
+[connection signal="pressed" from="infowindow/BACK" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -506,15 +506,8 @@ shrink_to_scale_x = -10.5
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=615698784]
 visible = false
 position = Vector2(256, -243)
-tile_map_data = PackedByteArray("AAAhACEAAAAEAAMAAAAiACEAAAAEAAMAAAAjACEAAAAEAAMAAAAkACEAAAAEAAMAAAAcABwAAAAFAAcAAAAbABwAAAAFAAcAAAAaABwAAAAFAAQAAAAaAB0AAAAFAAQAAAAbAB0AAAAFAAQAAAAcAB0AAAAFAAQAAAAVABgAAAACAAEAAAAUABgAAAACAAEAAAATABgAAAACAAEAAAASABgAAAACAAEAAAARABgAAAACAAEAAAA=")
+tile_map_data = PackedByteArray("AAAhACEAAAAEAAMAAAAiACEAAAAEAAMAAAAjACEAAAAEAAMAAAAkACEAAAAEAAMAAAAcABwAAAAFAAcAAAAbABwAAAAFAAcAAAAaABwAAAAFAAQAAAAaAB0AAAAFAAQAAAAbAB0AAAAFAAQAAAAcAB0AAAAFAAQAAAAVABgAAAACAAEAAAAUABgAAAACAAEAAAATABgAAAACAAEAAAASABgAAAACAAEAAAARABgAAAACAAEAAAAQABgAAAADAAIAAAAWABgAAAADAAIAAAAXABgAAAADAAIAAGAPABgAAAADAAIAAGA=")
 tile_set = SubResource("TileSet_434vy")
-
-[node name="Label" type="Label" parent="." unique_id=1665725711]
-offset_left = -1.0
-offset_top = 2.0
-offset_right = 1453.0
-offset_bottom = 25.0
-text = "for level 7 put another door in top , or for next level mechnaism is like use opposite of level 4 like press S for small , and for another llevel mechanism is trying fake doors more than 3 doors."
 
 [node name="Label2" type="Label" parent="." unique_id=1427452595]
 offset_left = 3.0

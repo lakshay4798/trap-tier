@@ -203,6 +203,14 @@ func _physics_process(delta: float) -> void:
 			
 	if "level_22" in get_tree().current_scene.name.to_lower():
 		pass
+		
+	if "level_25" in get_tree().current_scene.name.to_lower():
+		if Input.is_key_pressed(KEY_ENTER):
+			$"../spikes".visible = true
+			$"../spikes2".visible = true
+			$"../spikes3".visible = true
+			$"../spikes4".visible = true
+		#pass
 	
 	if "endscene" in get_tree().current_scene.name.to_lower():
 		#set_physics_process(false)

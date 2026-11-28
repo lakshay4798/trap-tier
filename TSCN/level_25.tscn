@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ckxwu2efa3hvi" path="res://TSCN/door.tscn" id="1_gc4yx"]
 [ext_resource type="Texture2D" uid="uid://y8mg04ll7n2c" path="res://ASSET/black.png" id="1_nwsg4"]
-[ext_resource type="PackedScene" uid="uid://bdjbu4wt6pfyp" path="res://TSCN/endscene.tscn" id="2_dbvhw"]
+[ext_resource type="PackedScene" uid="uid://chxu2lqtujjm0" path="res://TSCN/level_26.tscn" id="2_dbvhw"]
 [ext_resource type="PackedScene" uid="uid://dfb77smoa0rd0" path="res://TSCN/player.tscn" id="3_j3ct5"]
 [ext_resource type="PackedScene" uid="uid://dn7ji2w8lb5un" path="res://TSCN/death.tscn" id="4_j3ct5"]
 [ext_resource type="FontFile" uid="uid://duu2xft1cxyhx" path="res://ASSET/Square-Black.ttf" id="5_badnc"]
@@ -206,11 +206,24 @@ sources/0 = SubResource("TileSetAtlasSource_brq78")
 
 [sub_resource type="PrismMesh" id="PrismMesh_dbvhw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbvhw"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [node name="level_25" type="Node2D" unique_id=1984245836]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1944428487]
 offset_right = 1280.0
 offset_bottom = 720.0
+color = Color(0.85882354, 0.85882354, 0.85882354, 1)
 
 [node name="door" parent="." unique_id=243384013 instance=ExtResource("1_gc4yx")]
 position = Vector2(258, 170)
@@ -317,3 +330,13 @@ mesh = SubResource("PrismMesh_dbvhw")
 [node name="death" parent="spikes4" unique_id=653661873 instance=ExtResource("4_j3ct5")]
 position = Vector2(519.14307, 583.3333)
 scale = Vector2(0.07, 2)
+
+[node name="Label3" type="Label" parent="." unique_id=1064705384]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("5_badnc")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbvhw")
+text = "level 25"

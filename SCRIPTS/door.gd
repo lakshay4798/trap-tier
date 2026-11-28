@@ -7,6 +7,7 @@ extends Area2D
 @export var wrong_door : bool = false
 @onready var door = $"."
 @onready var start_y := position.y
+@onready var wrongdoor_sound = $wrongdoor
 
 
 var can_move := false
@@ -40,6 +41,9 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		if wrong_door:
+			wrongdoor_sound.play()
+			if "start" in get_tree().current_scene.name.to_lower():
+				$"../Label5".visible = true
 			return
 		body.set_physics_process(false)
 
